@@ -2,13 +2,25 @@
 import React from 'react';
 import './App.scss';
 import H1 from '../Components/H1/H1';
+import { Col, Container, Row } from 'react-grid-system';
 
-// class App extends Component {
-//   render() {
-//     return <H1>First Title Component</H1>;
-//   }
-// }
-// Jeg har bare lige lavet App om til en funktion hurtigt, så airbnb formatet holder kæft for nu
+class App extends Component {
+  render() {
+    return (
+      <Container>
+        <Row>
+          <Col xs={6}>
+            <H1>First Title Component</H1>
+          </Col>
+          <Col xs={6}>
+            <H1>Second Title Component</H1>
+          </Col>
+        </Row>
+      </Container>
+
+    );
+  }
+}
 
 const App = () => <H1>First Title Component</H1>;
 
