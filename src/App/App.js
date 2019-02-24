@@ -2,27 +2,17 @@ import React, { Component } from 'react';
 import './App.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import H1 from '../Components/H1/H1';
-import Card from '../Components/Card/Card';
-import WhatIsInteractiondesignFront from '../Components/WhatIsInteractiondesign/WhatIsInteractiondesignFront';
-import HowDoesInteractiondesignFitFront from '../Components/HowDoesInteractiondesignFit/HowDoesInteractionDesignFitFront';
+import { Route } from 'react-router-dom';
+import Main from '../Pages/Main';
+import CompanySignup from '../Pages/CompanySignup';
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <Row>
-          <Col xs={6}>
-            <H1>First Title Component</H1>
-          </Col>
-          <Col xs={6}>
-            <H1>Second Title Component</H1>
-            <Card
-              front={<WhatIsInteractiondesignFront />}
-              back={<HowDoesInteractiondesignFitFront />}
-            />
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <Route exact path='/' component={Main} />
+        <Route exact path='/company-signup' component={CompanySignup} />
+      </div>
     );
   }
 }
