@@ -1,5 +1,4 @@
-// import React, { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
 import './App.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import H1 from '../Components/H1/H1';
