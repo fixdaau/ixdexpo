@@ -9,6 +9,7 @@
     "mapbox-gl": "^0.53.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.2",
+    "react-card-flip": "^0.4.0",
     "react-dom": "^16.8.2",
     "react-grid-system": "^4.4.2",
     "react-input-mask": "^2.0.4",
