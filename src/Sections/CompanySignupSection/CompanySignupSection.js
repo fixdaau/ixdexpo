@@ -37,7 +37,8 @@ class CompanySignupSection extends Component {
             name: 'initial',
             email: 'initial'
         },
-        checked: false
+        checked: false,
+        isLoading: false
     }
 
     validateFields = (name, value) => {
@@ -54,10 +55,29 @@ class CompanySignupSection extends Component {
     addToFireBase = () => {
         const { payload, checked } = this.state;
 
+        this.setState({ isLoading: true });
+
         payload.submitTime = parseInt((new Date().getTime() / 1000).toFixed(0));
         payload.conditionsAccepted = checked
 
         firebase.registerCompany(this.state.payload);
+
+        setTimeout(
+            () => {
+                this.setState({
+                    isLoading: false,
+                    isValidated: {
+                        companyName: 'initial',
+                        cvr: 'initial',
+                        numberOfAttendees: 'initial',
+                        name: 'initial',
+                        email: 'initial'
+                    }
+                });
+                this.myFormRef.reset();
+            },
+            1500
+        )
     }
 
     getValidationClass = step => {
@@ -88,19 +108,19 @@ class CompanySignupSection extends Component {
     }
 
     render() {
-        const { isValidated, checked } = this.state;
+        const { isValidated, checked, isLoading } = this.state;
 
         return (
             <Row>
-                <Col xs={12} md={6} >
+                <Col xs={12} sm={12} md={6} >
                     <H1>Registration!</H1>
                     <div className='card'>
                         {this.sellingPoints.map((sp, i) =>
                             <Row className='spacing' key={i}>
-                                <Col xs={1} className='parent'>
+                                <Col xs={1} sm={1} className='parent'>
                                     <img className='icon' src={require(`../../Images/${sp.iconSrc}`)} alt='' />
                                 </Col>
-                                <Col xs={11}>
+                                <Col xs={10} sm={10} md={10} lg={11} >
                                     <div className='cell'>{sp.text}</div>
                                 </Col>
                             </Row>
@@ -112,10 +132,10 @@ class CompanySignupSection extends Component {
                     </div>
                 </Col>
                 <Col md={1} />
-                <Col xs={12} md={5}>
+                <Col xs={12} sm={12} md={5} className='parent'>
                     <h2 className='h2'>Reserve your spot today!</h2>
-                    <div className='info-text'></div>
-                    <form>
+                    {/* <div className='info-text'>Sign up below for IxD Expo, and you will receive more information soon!</div> */}
+                    <form ref={(el) => this.myFormRef = el}>
                         <input className={'input' + this.getValidationClass(isValidated.companyName)} placeholder='Company' onInput={i => { this.updateMainPayload('companyName', i.target.value); this.validateFields('companyName', i.target.value) }} />
                         <input className={'input' + this.getValidationClass(isValidated.cvr)} placeholder='CVR-number' onInput={i => { this.updateMainPayload('cvr', i.target.value); this.validateFields('cvr', i.target.value) }} />
                         <InputMask className={'input' + this.getValidationClass(isValidated.numberOfAttendees)} placeholder='Number of attendees' onInput={i => { this.updateMainPayload('numberOfAttendees', i.target.value); this.validateFields('numberOfAttendees', i.target.value) }} mask="3" maskChar='' formatChars={{ '3': '[1-3]' }} />
@@ -133,7 +153,13 @@ class CompanySignupSection extends Component {
                                 <span className='license-text'>Check here to indicate that you accept paying the registration fee, which is non-refundable.</span>
                             </Col>
                         </Row>
-                        <button className='button' disabled={!(Object.keys(isValidated).every(k => isValidated[k] === 'valid') && checked)} onClick={e => { e.preventDefault(); this.addToFireBase() }}>Register for IXD EXPO</button>
+                        <button
+                            className='button'
+                            disabled={!(Object.keys(isValidated).every(k => isValidated[k] === 'valid') && checked)}
+                            onClick={e => { e.preventDefault(); this.addToFireBase() }}
+                        >
+                            {isLoading ? <img style={{ height: '40px' }} src={require('../../Images/Loading.svg')} alt='' /> : 'Register for IXD EXPO'}
+                        </button>
                     </form>
                 </Col>
             </Row >

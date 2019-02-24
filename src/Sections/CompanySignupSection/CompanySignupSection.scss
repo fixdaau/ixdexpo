@@ -91,15 +91,19 @@
     font-family: "Medium";
     font-size: 18px;
     margin-top: 24px;
-}
-
-.button:disabled {
-    background-color: #bfbfbf;
+    cursor: pointer;
 }
 
 .button:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px 0 rgba(0, 0, 255, 0.25);
+}
+
+.button:disabled {
+    background-color: #bfbfbf;
+    cursor: not-allowed;
+    transform: scale(1.00);
+    box-shadow: none;
 }
 
 .button:focus {
