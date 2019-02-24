@@ -1,8 +1,10 @@
-// import React, { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
 import './App.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import H1 from '../Components/H1/H1';
+import Card from '../Components/Card/Card';
+import WhatIsInteractiondesignFront from '../Components/WhatIsInteractiondesign/WhatIsInteractiondesignFront';
+import HowDoesInteractiondesignFitFront from '../Components/HowDoesInteractiondesignFit/HowDoesInteractionDesignFitFront';
 
 class App extends Component {
   render() {
@@ -14,6 +16,10 @@ class App extends Component {
           </Col>
           <Col xs={6}>
             <H1>Second Title Component</H1>
+            <Card
+              front={<WhatIsInteractiondesignFront />}
+              back={<HowDoesInteractiondesignFitFront />}
+            />
           </Col>
         </Row>
       </Container>
