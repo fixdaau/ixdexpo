@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import React from 'react';
 import './App.scss';
-import H1 from '../Components/H1/H1';
 import { Col, Container, Row } from 'react-grid-system';
+import H1 from '../Components/H1/H1';
 
 class App extends Component {
   render() {
@@ -16,11 +17,8 @@ class App extends Component {
           </Col>
         </Row>
       </Container>
-
     );
   }
 }
 
 export default App;
-
-
