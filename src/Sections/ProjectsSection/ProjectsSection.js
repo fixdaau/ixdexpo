@@ -6,12 +6,11 @@ import H3 from "../../Components/H3/H3";
 
 const ProjectsSection = () => {
   return (
-    <Container className="projects">
-      <Container className="h2">
-        <H2>Examples of student projects</H2>
-      </Container>
-
       <Row>
+        <Col xs={12} className="h2">
+          <H2>Examples of student projects</H2>
+        </Col>
+
         <Col sm={12} md={4}>
           <img src={require("../../Images/bellis.jpg")} alt="Bellis project" />
           <H3>Bellis</H3>
@@ -39,7 +38,6 @@ const ProjectsSection = () => {
           </p>
         </Col>
       </Row>
-    </Container>
   );
 };
 
