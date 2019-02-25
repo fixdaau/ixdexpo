@@ -7,7 +7,7 @@ import "./SplashSection.scss";
 const SplashSection = () => {
   return (
     <Row className="splash">
-      <Col sm={12} md={7}>
+      <Col sm={12} md={6}>
         <H1>Meet the next generation of designers</H1>
         <p>
           Experience state-of-the-art in digital and physical possibilities of
@@ -38,7 +38,7 @@ const SplashSection = () => {
           <Button url="#">Sign up for an invitation</Button>
         </div>
       </Col>
-      <Col sm={12} md={5}>
+      <Col sm={12} md={6} >
         <img id="splashImg" src={require("../../Images/Illustration.svg")} />
       </Col>
     </Row>
