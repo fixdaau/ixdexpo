@@ -1,0 +1,64 @@
+.splash {
+    height: calc(100vh - 180px);
+}
+
+p {
+    font-size: 24px;
+    font-family: "Regular";
+    color: #56597a;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.container div {
+    display: flex;
+    align-items: center;
+}
+
+div p {
+    display: inline;
+    font-size: 18px;
+    font-family: "Regular";
+    color: #7c7ca5;
+}
+
+div .icon {
+    padding-bottom: 4px;
+    margin-right: 5px;
+}
+
+#splashImg {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .splash {
+        height: calc(100vh - 80px);
+    }
+   
+    #splashImg {
+        display:none;
+    }
+    
+    .container{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container div {
+        display: flex;
+        justify-content: left;
+        padding-left: 30px;
+    }
+
+    .Button{
+        display: flex;
+        justify-content: center;
+    }
+}
+  
