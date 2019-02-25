@@ -7,7 +7,7 @@ import H3 from "../../Components/H3/H3";
 const ProjectsSection = () => {
   return (
     <Row>
-      <Col xs={12} className="h2">
+      <Col xs={12} className='header-wrapper'>
         <H2>Examples of student projects</H2>
       </Col>
 

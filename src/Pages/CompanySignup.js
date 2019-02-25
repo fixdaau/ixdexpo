@@ -6,11 +6,12 @@ import Footer from '../Sections/Footer/Footer';
 
 class CompanySignup extends Component {
     render() {
+        const { changeModalVisibility } = this.props;
         return (
             <>
                 <Header />
                 <Container>
-                    <CompanySignupSection />
+                    <CompanySignupSection changeModalVisibility={changeModalVisibility} />
                 </Container>
                 <Footer />
             </>

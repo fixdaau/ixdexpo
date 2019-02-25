@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { Col, Container, Row } from 'react-grid-system';
-import H1 from '../Components/H1/H1';
 import { Route } from 'react-router-dom';
 import Main from '../Pages/Main';
 import CompanySignup from '../Pages/CompanySignup';
+import PopupModal from '../Components/PopupModal/PopupModal';
 
 class App extends Component {
+  state = {
+    showModal: true
+  }
+
+  changeModalVisibility = showModal => this.setState({ showModal: showModal });
+
   render() {
+    const { showModal } = this.state;
+
     return (
-      <div>
-        <Route exact path='/' component={Main} />
-        <Route exact path='/company-signup' component={CompanySignup} />
+      <div id='modal-container'>
+        <div id='app' className={showModal ? 'add-blur' : ''}>
+          <Route exact={true} path='/' component={Main} />
+          <Route exact={true} path='/company-signup' render={() =>
+            <CompanySignup changeModalVisibility={this.changeModalVisibility} />
+          } />
+        </div>
+        {this.state.showModal && <PopupModal changeModalVisibility={this.changeModalVisibility} />}
       </div>
     );
   }

@@ -1,0 +1,49 @@
+.modal-wrapper {
+    position: fixed;
+    top: 200px;
+    left: 0px;
+    width: 100%;
+}
+
+.modal {
+    width: 100%;
+    padding: 40px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 10px 44px 0 rgba(0, 0, 0, 0.1); // height: 400px;
+    background: white;
+    margin-left: 0px !important;
+}
+
+.sub-text {
+    font-size: 24px;
+    color: black;
+    font-family: "Regular";
+}
+
+.bullet-text {
+    font-family: "Light";
+    font-size: 18px;
+    line-height: 1.41;
+    padding-left: 16px;
+}
+
+.redirect-button {
+    float: right;
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-wrapper {
+        width: 80%;
+        position: absolute;
+        top: 16px;
+    }
+
+    .redirect-button {
+        float: initial;
+        padding-top: 24px;
+        text-align: center;
+    }
+}
+
