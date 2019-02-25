@@ -4,13 +4,14 @@ p {
     color: #56597a;
 }
 
-.container {
+.information {
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
+    cursor: default;
 }
 
-.container div {
+.information div {
     display: flex;
     align-items: center;
 }
@@ -41,13 +42,13 @@ div .icon {
         display:none;
     }
     
-    .container{
+    .information{
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .container div {
+    .information div {
         display: flex;
         justify-content: left;
         padding-left: 30px;
