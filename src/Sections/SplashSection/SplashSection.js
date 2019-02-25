@@ -37,7 +37,7 @@ const SplashSection = () => {
           </div>
         </div>
         <div className="Button">
-          <Button url="#">Sign up for an invitation</Button>
+          {/* <Button url="#">Sign up for an invitation</Button> */}
         </div>
       </Col>
       <Col sm={12} md={6} >

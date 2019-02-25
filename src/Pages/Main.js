@@ -16,11 +16,11 @@ class Main extends Component {
                 <Container>
                     <SplashSection />
                     <Divider marginOnTop={true} marginOnBottom={true} />
-                    <WhatIsSection />
-                    <Divider marginOnTop={true} marginOnBottom={true}  />
+                    {/* <WhatIsSection />
+                    <Divider marginOnTop={true} marginOnBottom={true}  /> */}
                     <TimeScheduleSection />
-                    <Divider marginOnTop={true} marginOnBottom={true} />
-                    <ProjectsSection />
+                    {/* <Divider marginOnTop={true} marginOnBottom={true} />
+                    <ProjectsSection /> */}
                 </Container>
                 <Footer />
             </>

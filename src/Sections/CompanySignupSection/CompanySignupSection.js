@@ -101,6 +101,7 @@ class CompanySignupSection extends Component {
 
     // Refactor to functional setstate
     updateMainPayload = (fieldId, value) => {
+        console.log(value)
         const newState = this.state;
         newState.payload[fieldId] = value;
         this.setState({ payload: newState.payload })
@@ -140,11 +141,11 @@ class CompanySignupSection extends Component {
                 <Col md={1} />
                 <Col xs={12} sm={12} md={5} className='parent'>
                     <h2 className='h2'>Reserve your spot today!</h2>
-                    {/* <div className='info-text'>Sign up below for IxD Expo, and you will receive more information soon!</div> */}
+                    <div className='info-text'>Don't worry if you are not sure how many you will attend, you can allways update your information by writing to us!</div>
                     <form ref={(el) => this.myFormRef = el}>
                         <input className={'input' + this.getValidationClass(isValidated.companyName)} placeholder='Company' onInput={i => { this.updateMainPayload('companyName', i.target.value); this.validateFields('companyName', i.target.value) }} />
                         <input className={'input' + this.getValidationClass(isValidated.cvr)} placeholder='CVR-number' onInput={i => { this.updateMainPayload('cvr', i.target.value); this.validateFields('cvr', i.target.value) }} />
-                        <InputMask className={'input' + this.getValidationClass(isValidated.numberOfAttendees)} placeholder='Number of attendees' onInput={i => { this.updateMainPayload('numberOfAttendees', i.target.value); this.validateFields('numberOfAttendees', i.target.value) }} mask="3" maskChar='' formatChars={{ '3': '[1-3]' }} />
+                        <InputMask className={'input' + this.getValidationClass(isValidated.numberOfAttendees)} placeholder='Number of attendees (1-3)' onInput={i => { this.updateMainPayload('numberOfAttendees', i.target.value[0]); this.validateFields('numberOfAttendees', i.target.value) }} mask="3" maskChar='' formatChars={{ '3': '[1-3]' }} />
                         <div className='label'>About you</div>
                         <input className={'input' + this.getValidationClass(isValidated.name)} placeholder='Name' onInput={i => { this.updateAttendeePayload('attendeeOne', 'name', i.target.value); this.validateFields('name', i.target.value) }} />
                         <input className={'input' + this.getValidationClass(isValidated.email)} placeholder='Email' onInput={i => { this.updateAttendeePayload('attendeeOne', 'email', i.target.value); this.validateFields('email', i.target.value) }} />

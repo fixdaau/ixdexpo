@@ -21,11 +21,11 @@ class PopupModal extends Component {
                             <p className='sub-text'>Thanks for signing up. We are working very hard and we will reach out to you in a near future.</p>
                             <Row style={{ marginTop: '40px' }}>
                                 <Col xs={1}><img src={require('../../Images/Icon_Magazine entry.svg')} style={{ marginTop: '4px' }} /></Col>
-                                <Col xs={10} ><div className='bullet-text'>We will send you the exposition magazine ahead of the event, so you will have plenty of time to prepare and know what to expect.</div></Col>
+                                <Col xs={10} ><div className='bullet-text'>We will contact you in the coming weeks for further attendee information as well as address information for the Expo Magazine </div></Col>
                             </Row>
                             <Row style={{ marginTop: '32px' }}>
                                 <Col xs={1}><img src={require('../../Images/Icon_Funds.svg')} style={{ marginTop: '4px' }} /></Col>
-                                <Col xs={10} ><div className='bullet-text'>The invoice will be sent to the ‘first attendee’ after the event has taken place. You will have two weeks to pay.</div></Col>
+                                <Col xs={10} ><div className='bullet-text'>The invoice will be sent to you after the event has taken place. You will have two weeks to pay.</div></Col>
                             </Row>
                             <div className='redirect-button'>
                                 <Button url='/' onClick={() => {
