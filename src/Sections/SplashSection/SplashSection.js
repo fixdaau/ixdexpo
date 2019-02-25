@@ -14,7 +14,7 @@ const SplashSection = () => {
           Interaction Design through master and bachelor projects presented by
           students.
         </p>
-        <div className="container">
+        <div className="information">
           <div>
             <img
               className='icon'
