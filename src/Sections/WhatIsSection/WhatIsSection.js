@@ -6,25 +6,20 @@ import WhatIsInteractiondesignBack from '../../Components/WhatIsInteractiondesig
 import HowDoesInteractionDesignFitFront from '../../Components/HowDoesInteractiondesignFit/HowDoesInteractionDesignFitFront';
 import HowDoesInteractionDesignFitBack from '../../Components/HowDoesInteractiondesignFit/HowDoesInteractionDesignFitBack';
 
-
-const WhatIsSection = () => {
-    return (
-        <Row>
-            <Col xs={12} sm={12} md={6}>
-                <Card
-                    front={<WhatIsInteractiondesignFront />}
-                    back={<WhatIsInteractiondesignFront />}
-                />
-            </Col>
-            {/* <Col md={2} /> */}
-            <Col xs={12} sm={12} md={6}>
-                <Card
-                    front={<HowDoesInteractionDesignFitFront />}
-                    back={<HowDoesInteractionDesignFitFront />}
-                />
-            </Col>
-        </Row>
-    );
-};
+const WhatIsSection = () =>
+    <Row>
+        <Col xs={12} sm={12} md={6}>
+            <Card
+                front={<WhatIsInteractiondesignFront />}
+                back={<WhatIsInteractiondesignFront />}
+            />
+        </Col>
+        <Col xs={12} sm={12} md={6}>
+            <Card
+                front={<HowDoesInteractionDesignFitFront />}
+                back={<HowDoesInteractionDesignFitFront />}
+            />
+        </Col>
+    </Row>;
 
 export default WhatIsSection;

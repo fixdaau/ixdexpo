@@ -17,17 +17,19 @@ const SplashSection = () => {
         <div className="container">
           <div>
             <img
+              className='icon'
               src={require("../../Images/Icons_Calendar.svg")}
               alt="Calendar"
             />
             <p>April 3, 2019</p>
           </div>
           <div>
-            <img src={require("../../Images/Icons_Time.svg")} alt="Time" />
+            <img className='icon' src={require("../../Images/Icons_Time.svg")} alt="Time" />
             <p>15:00 - 20:00</p>
           </div>
           <div>
             <img
+              className='icon'
               src={require("../../Images/Icons_Location.svg")}
               alt="Location"
             />
