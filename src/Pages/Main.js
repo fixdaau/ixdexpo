@@ -6,6 +6,7 @@ import Footer from '../Sections/Footer/Footer';
 import WhatIsSection from '../Sections/WhatIsSection/WhatIsSection';
 import Divider from '../Components/Divider/Divider';
 import ProjectsSection from '../Sections/ProjectsSection/ProjectsSection';
+import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
 
 class Main extends Component {
     render() {
@@ -16,6 +17,8 @@ class Main extends Component {
                     <SplashSection />
                     <Divider marginOnTop={true} marginOnBottom={true} />
                     <WhatIsSection />
+                    <Divider marginOnTop={true} marginOnBottom={true}  />
+                    <TimeScheduleSection />
                     <Divider marginOnTop={true} marginOnBottom={true} />
                     <ProjectsSection />
                 </Container>
