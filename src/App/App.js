@@ -7,7 +7,7 @@ import PopupModal from '../Components/PopupModal/PopupModal';
 
 class App extends Component {
   state = {
-    showModal: true
+    showModal: false  
   }
 
   changeModalVisibility = showModal => this.setState({ showModal: showModal });

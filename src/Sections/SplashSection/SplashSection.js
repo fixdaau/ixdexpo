@@ -41,7 +41,7 @@ const SplashSection = () => {
         </div>
       </Col>
       <Col sm={12} md={6} >
-        <img id="splashImg" src={require("../../Images/Illustration.svg")} />
+        <img id="splashImg" src={require("../../Images/Illustration-Topsection.svg")} />
       </Col>
     </Row>
   );
