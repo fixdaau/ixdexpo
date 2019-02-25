@@ -158,7 +158,7 @@ class CompanySignupSection extends Component {
                             disabled={!(Object.keys(isValidated).every(k => isValidated[k] === 'valid') && checked)}
                             onClick={e => { e.preventDefault(); this.addToFireBase() }}
                         >
-                            {isLoading ? <img style={{ height: '40px' }} src={require('../../Images/Loading.svg')} alt='' /> : 'Register for IXD EXPO'}
+                            {isLoading ? <img style={{ height: '48px', marginTop: '-16px' }} src={require('../../Images/Loading.svg')} alt='' /> : 'Register for IXD EXPO'}
                         </button>
                     </form>
                 </Col>
