@@ -14,9 +14,9 @@ class Main extends Component {
                 <Header />
                 <Container>
                     <SplashSection />
-                    <Divider style={{ marginBottom: '120px' }} />
+                    <Divider marginOnTop={true} marginOnBottom={true} />
                     <WhatIsSection />
-                    <Divider style={{ marginBottom: '120px', marginTop: '120px' }} />
+                    <Divider marginOnTop={true} marginOnBottom={true} />
                     <ProjectsSection />
                 </Container>
                 <Footer />

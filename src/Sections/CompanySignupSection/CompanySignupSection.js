@@ -75,6 +75,12 @@ class CompanySignupSection extends Component {
                     }
                 });
                 this.myFormRef.reset();
+                this.props.changeModalVisibility(true);
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
             },
             1500
         )
@@ -154,7 +160,7 @@ class CompanySignupSection extends Component {
                             </Col>
                         </Row>
                         <button
-                            className='button'
+                            className='submit-button'
                             disabled={!(Object.keys(isValidated).every(k => isValidated[k] === 'valid') && checked)}
                             onClick={e => { e.preventDefault(); this.addToFireBase() }}
                         >

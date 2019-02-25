@@ -32,3 +32,8 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+.add-blur {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}

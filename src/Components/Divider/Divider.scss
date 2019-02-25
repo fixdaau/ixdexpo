@@ -2,3 +2,21 @@
     height: 1px;
     background-color: rgba(0, 0, 0, 0.08);
 }
+
+.divider-margin-top {
+    margin-top: 120px;
+}
+
+.divider-margin-bottom {
+    margin-bottom: 120px;
+}
+
+@media screen and (max-width: 768px) {
+    .divider-margin-top {
+        margin-top: 80px;
+    }
+
+    .divider-margin-bottom {
+        margin-bottom: 80px;
+    }
+}
