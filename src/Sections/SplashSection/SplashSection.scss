@@ -1,4 +1,4 @@
-p {
+.paragraph {
     font-size: 24px;
     font-family: "Regular";
     color: #56597a;
@@ -46,12 +46,13 @@ div .icon {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        // margin: 0;
     }
 
     .information div {
         display: flex;
         justify-content: left;
-        padding-left: 30px;
+        // padding-left: 30px;
     }
 
     .Button{

@@ -7,6 +7,7 @@ import WhatIsSection from '../Sections/WhatIsSection/WhatIsSection';
 import Divider from '../Components/Divider/Divider';
 import ProjectsSection from '../Sections/ProjectsSection/ProjectsSection';
 import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
+import InterestedCompanySection from '../Sections/InterestedCompanySection/InterestedCompanySection';
 
 class Main extends Component {
     render() {
@@ -21,6 +22,8 @@ class Main extends Component {
                     <TimeScheduleSection />
                     <Divider marginOnTop={true} marginOnBottom={true} />
                     <ProjectsSection />
+                    <Divider marginOnTop={true} marginOnBottom={true} />
+                    <InterestedCompanySection />                    
                 </Container>
                 <Footer />
             </>

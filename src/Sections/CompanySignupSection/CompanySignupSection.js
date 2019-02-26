@@ -101,7 +101,6 @@ class CompanySignupSection extends Component {
 
     // Refactor to functional setstate
     updateMainPayload = (fieldId, value) => {
-        console.log(value)
         const newState = this.state;
         newState.payload[fieldId] = value;
         this.setState({ payload: newState.payload })
