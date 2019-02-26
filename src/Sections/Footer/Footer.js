@@ -17,7 +17,7 @@ const Footer = () => {
                         <div className='large-text'>WHERE?</div>
                         <div className='description-text'>
                             <img src={require('../../Images/Icons_Location_White.svg')} />
-                            Selma Lagerlöfsvej 300 9000, Aalborg
+                            Selma Lagerløfs Vej 300, 9000 Aalborg
                         </div>
                         <div className='large-text'>CONTACT</div>
                         <div className='description-text' style={{ fontSize: '20px' }}>ixd-expo@fixd.aau.dk</div>
