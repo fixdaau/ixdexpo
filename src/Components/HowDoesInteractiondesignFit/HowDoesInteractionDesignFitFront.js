@@ -5,11 +5,13 @@ import './HowDoesInteractionDesignFit.scss';
 
 const howDoesInteractiondesignFitFront = () => (
   <div className="front">
-    <H2>How does interaction design fit your business?</H2>
-    <img
-      src={require('../../Images/InteractiondesignFitBusiness.svg')}
-      alt=""
-    />
+    <div className="container">
+      <H2>How does interaction design fit your business?</H2>
+      <img
+        src={require('../../Images/InteractiondesignFitBusiness.svg')}
+        alt=""
+      />
+    </div>
   </div>
 );
 

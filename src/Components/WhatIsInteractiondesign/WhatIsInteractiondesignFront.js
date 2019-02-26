@@ -5,8 +5,10 @@ import './WhatIsInteractiondesign.scss';
 
 const whatIsInteractiondesignFront = () => (
   <div className="front">
-    <H2>What is interaction design?</H2>
-    <img src={require('../../Images/WhatIsInteractiondesign.svg')} alt="" />
+    <div className="container">
+      <H2>What is interaction design?</H2>
+      <img src={require('../../Images/WhatIsInteractiondesign.svg')} alt="" />
+    </div>
   </div>
 );
 
