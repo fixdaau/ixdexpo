@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { Container } from 'react-grid-system';
+import InteractionDesignSection from '../Sections/InteractionDesignSection/InteractionDesignSection';
+
 
 class Main extends Component {
     render() {
         return (
-            <div>
-                Main page
-            </div>
+            <Container>
+                <InteractionDesignSection />
+            </Container>
         );
     }
 }
