@@ -24,9 +24,9 @@ const InteractionDesignSection = () => {
                         back={<img src={require('../../Images/How does interaction design fit your business_Back.svg')} style={{ width: '100%' }} />}
                     />
                 </Visible>
-                <Visible xs={true} sm={true}>
+                {/* <Visible xs={true} sm={true}>
                     <img src={require('../../Images/How does interaction design fit your business_Back.svg')} style={{ width: '100%', marginTop: '40px' }} />
-                </Visible>
+                </Visible> */}
             </Col>
         </Row>
     );
