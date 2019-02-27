@@ -5,6 +5,7 @@ import H1 from '../../Components/H1/H1';
 import './CompanySignupSection.scss';
 import { firebase } from '../../Utils/Firebase';
 import { getSellingPoints } from '../../data';
+import H2 from '../../Components/H2/H2';
 
 class CompanySignupSection extends Component {
 
@@ -14,7 +15,6 @@ class CompanySignupSection extends Component {
         payload: {
             companyName: '',
             cvr: '',
-            numberOfAttendees: 0,
             attendees: {
                 attendeeOne: {
                     name: '',
@@ -33,12 +33,13 @@ class CompanySignupSection extends Component {
         isValidated: {
             companyName: 'initial',
             cvr: 'initial',
-            numberOfAttendees: 'initial',
+            numberOfAttendees: 'valid',
             name: 'initial',
             email: 'initial'
         },
         checked: false,
-        isLoading: false
+        isLoading: false,
+        attendees: '2'
     }
 
     validateFields = (name, value) => {
@@ -53,12 +54,13 @@ class CompanySignupSection extends Component {
     }
 
     addToFireBase = () => {
-        const { payload, checked } = this.state;
+        const { payload, checked, attendees } = this.state;
 
         this.setState({ isLoading: true });
 
         payload.submitTime = parseInt((new Date().getTime() / 1000).toFixed(0));
-        payload.conditionsAccepted = checked
+        payload.conditionsAccepted = checked;
+        payload.numberOfAttendees = attendees;
 
         firebase.registerCompany(this.state.payload);
 
@@ -69,7 +71,7 @@ class CompanySignupSection extends Component {
                     isValidated: {
                         companyName: 'initial',
                         cvr: 'initial',
-                        numberOfAttendees: 'initial',
+                        numberOfAttendees: 'valid',
                         name: 'initial',
                         email: 'initial'
                     }
@@ -114,7 +116,7 @@ class CompanySignupSection extends Component {
     }
 
     render() {
-        const { isValidated, checked, isLoading } = this.state;
+        const { isValidated, checked, isLoading, attendees } = this.state;
 
         return (
             <Row>
@@ -139,12 +141,27 @@ class CompanySignupSection extends Component {
                 </Col>
                 <Col md={1} />
                 <Col xs={12} sm={12} md={5} className='parent'>
-                    <h2 className='h2'>Reserve your spot today!</h2>
+                    <H2 alignment='left'>Reserve your spot today!</H2>
                     <div className='info-text'>Don't worry if you are not sure how many you will attend, you can allways update your information by writing to us!</div>
                     <form ref={(el) => this.myFormRef = el}>
                         <input className={'input' + this.getValidationClass(isValidated.companyName)} placeholder='Company' onInput={i => { this.updateMainPayload('companyName', i.target.value); this.validateFields('companyName', i.target.value) }} />
                         <input className={'input' + this.getValidationClass(isValidated.cvr)} placeholder='CVR-number' onInput={i => { this.updateMainPayload('cvr', i.target.value); this.validateFields('cvr', i.target.value) }} />
-                        <InputMask className={'input' + this.getValidationClass(isValidated.numberOfAttendees)} placeholder='Number of attendees (1-3)' onInput={i => { this.updateMainPayload('numberOfAttendees', i.target.value[0]); this.validateFields('numberOfAttendees', i.target.value) }} mask="3" maskChar='' formatChars={{ '3': '[1-3]' }} />
+                        {/* <InputMask className={'input' + this.getValidationClass(isValidated.numberOfAttendees)} placeholder='Number of attendees (1-3)' onInput={i => { this.updateMainPayload('numberOfAttendees', i.target.value[0]); this.validateFields('numberOfAttendees', i.target.value) }} mask="3" maskChar='' formatChars={{ '3': '[1-3]' }} /> */}
+                        
+                        <div className='label'>How many will be attending?</div>
+                        <label className={'radio-container' + (attendees === '1' ? ' radio-container-active' : '')} >1
+                            <input type="radio" name="attendees" value="1" checked={attendees === '1'} onChange={e => { this.setState({ attendees: e.target.value }); this.validateFields('numberOfAttendees', e.target.value) }} />
+                            <span className="radio-checkmark"></span>
+                        </label>
+                        <label className={'radio-container' + (attendees === '2' ? ' radio-container-active' : '')} >2
+                            <input type="radio" name="attendees" value="2" checked={attendees === '2'} onChange={e => { this.setState({ attendees: e.target.value }); this.validateFields('numberOfAttendees', e.target.value) }} />
+                            <span className="radio-checkmark"></span>
+                        </label>
+                        <label className={'radio-container' + (attendees === '3' ? ' radio-container-active' : '')}>3
+                            <input type="radio" name="attendees" value="3" checked={attendees === '3'} onChange={e => { this.setState({ attendees: e.target.value }); this.validateFields('numberOfAttendees', e.target.value) }} />
+                            <span className="radio-checkmark"></span>
+                        </label>
+
                         <div className='label'>About you</div>
                         <input className={'input' + this.getValidationClass(isValidated.name)} placeholder='Name' onInput={i => { this.updateAttendeePayload('attendeeOne', 'name', i.target.value); this.validateFields('name', i.target.value) }} />
                         <input className={'input' + this.getValidationClass(isValidated.email)} placeholder='Email' onInput={i => { this.updateAttendeePayload('attendeeOne', 'email', i.target.value); this.validateFields('email', i.target.value) }} />
