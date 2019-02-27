@@ -19,7 +19,6 @@ class Card extends Component {
   }
 
   render() {
-    console.log(this.state.isFlipped)
     return (
       <ReactCardFlip isFlipped={this.state.isFlipped}>
         <div
