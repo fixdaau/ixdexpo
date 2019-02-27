@@ -13,19 +13,27 @@ class Card extends Component {
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
   };
 
+  handleFlip = shouldFlip => {
+
+    this.setState({ isFlipped: shouldFlip })
+  }
+
   render() {
+    console.log(this.state.isFlipped)
     return (
       <ReactCardFlip isFlipped={this.state.isFlipped}>
         <div
-          className="card"
-          onMouseOver={() => this.setState({ isFlipped: true })}
+          className="flip-card-wrapper"
+          // onMouseOver={() => this.handleFlip(true)}
+          onMouseEnter={() => this.setState({ isFlipped: true })}
           key="front"
         >
           {this.props.front}
         </div>
         <div
-          onMouseLeave={() => this.setState({ isFlipped: false })}
-          className="card"
+          onMouseLeave={() => this.handleFlip(false)}
+          // onMouseOut={() => this.handleFlip(false)}
+          className="flip-card-wrapper"
           key="back"
         >
           {this.props.back}
