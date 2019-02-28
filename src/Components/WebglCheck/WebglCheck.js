@@ -1,10 +1,10 @@
 const WebglCheck = () => {
   const canvas = document.createElement("canvas");
   const webglContextNames = [
-    "webg",
-    "experimental-webg",
-    "webkit-3",
-    "moz-webg"
+    "webgl",
+    "experimental-webgl",
+    "webkit-3d",
+    "moz-webgl"
   ];
   let webglContext = null;
 
