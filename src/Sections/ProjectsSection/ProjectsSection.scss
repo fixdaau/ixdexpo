@@ -2,26 +2,16 @@
     margin-bottom: 32px;
 }
 
-.img {
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 14px 44px 0 rgba(0, 0, 0, 0.15);
+
+.slick-arrow:before{
+    display: flex;
+    justify-content: center;
+    color: rgba(0,0,255,0.8);
+    font-size: 30px;
 }
 
-@media screen and (max-width: 768px) {
-    .hideProject{
-        display:none;
+@media only screen and (max-width: 700px) {
+    .slick-arrow{
+        display: none !important;
     }
-}
-
-.Card{
-    
-}
-
-.test{
-    margin: 0px 15px;
-}
-
-.slick-arrow {
-    border: solid red 1px !important;
-}
+  }
