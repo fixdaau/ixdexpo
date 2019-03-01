@@ -11,12 +11,12 @@ const Footer = () => {
                     <Col xs={12} md={7}>
                         <div className='large-text'>WHEN?</div>
                         <div className='description-text'>
-                            <img src={require('../../Images/Icons_Calendar_White.svg')} />
-                            April 3, 2019 <img style={{ marginLeft: '32px' }} src={require('../../Images/Icons_Time_White.svg')} />15:00 - 20:00
+                            <img src={require('../../Images/Icons_Calendar_White.svg')} alt=""/>
+                            April 3, 2019 <img style={{ marginLeft: '32px' }} src={require('../../Images/Icons_Time_White.svg')} alt=""/>15:00 - 20:00
                             </div>
                         <div className='large-text'>WHERE?</div>
                         <div className='description-text'>
-                            <img src={require('../../Images/Icons_Location_White.svg')} />
+                            <img src={require('../../Images/Icons_Location_White.svg')} alt=""/>
                             Selma Lagerløfs Vej 300, 9000 Aalborg
                         </div>
                         <div className='large-text'>CONTACT</div>
