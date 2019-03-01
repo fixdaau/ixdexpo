@@ -22,5 +22,18 @@
 }
 
 .button:active {
-    transform: scale(1.0);
+    transform: scale(1);
+}
+
+.button-enroll {
+    color: #0000ff;
+    background-color: white;
+    border-radius: 0;
+    padding: 8px;
+}
+
+.button-enroll:hover {
+    border-radius: 100px;
+    box-shadow: none;
+    background: rgba(0, 0, 255, 0.12);
 }
