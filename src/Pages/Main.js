@@ -4,7 +4,7 @@ import SplashSection from '../Sections/SplashSection/SplashSection';
 import Header from '../Components/Header/Header';
 import Footer from '../Sections/Footer/Footer';
 import Divider from '../Components/Divider/Divider';
-import ProjectsSection from '../Sections/ProjectsSection/ProjectsSection';
+import ProjectsSection from '../Sections/ProjectsSection/ProjecsSection';
 import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
 import InterestedCompanySection from '../Sections/InterestedCompanySection/InterestedCompanySection';
 import InteractionDesignSection from '../Sections/InteractionDesignSection/InteractionDesignSection';
