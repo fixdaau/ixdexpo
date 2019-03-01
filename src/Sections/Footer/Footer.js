@@ -20,7 +20,7 @@ const Footer = () => {
                             Selma Lagerløfs Vej 300, 9000 Aalborg
                         </div>
                         <div className='large-text'>CONTACT</div>
-                        <div className='description-text' style={{ fontSize: '20px' }}>ixd-expo@fixd.aau.dk</div>
+                        <div className='description-text' style={{ fontSize: '20px' }}>expo@ixd-expo.aau.dk</div>
                         <div className='description-text' style={{ marginTop: '80px', marginBottom: '0px', fontSize: '20px' }}>FixD © 2019</div>
                     </Col>
                     <Visible xs={false} sm={false} md={false} lg={true} xl={true}>
