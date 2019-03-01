@@ -91,7 +91,7 @@ class MapBox extends Component {
       </div>
     ) : (
       <div>
-        <img src={require(`../../Images/Map.png`)} />
+        <img src={require(`../../Images/Map.png`)} alt=""/>
       </div>
     );
   }
