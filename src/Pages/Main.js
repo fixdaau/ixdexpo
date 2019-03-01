@@ -3,11 +3,12 @@ import { Container } from 'react-grid-system';
 import SplashSection from '../Sections/SplashSection/SplashSection';
 import Header from '../Components/Header/Header';
 import Footer from '../Sections/Footer/Footer';
-import WhatIsSection from '../Sections/WhatIsSection/WhatIsSection';
 import Divider from '../Components/Divider/Divider';
 import ProjectsSection from '../Sections/ProjectsSection/ProjecsSection';
 import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
 import InterestedCompanySection from '../Sections/InterestedCompanySection/InterestedCompanySection';
+import InteractionDesignSection from '../Sections/InteractionDesignSection/InteractionDesignSection';
+
 
 class Main extends Component {
     render() {
@@ -17,8 +18,8 @@ class Main extends Component {
                 <Container>
                     <SplashSection />
                     <Divider marginOnTop={true} marginOnBottom={true} />
-                    {/* <WhatIsSection />
-                    <Divider marginOnTop={true} marginOnBottom={true}  /> */}
+                    <InteractionDesignSection />
+                    <Divider marginOnTop={true} marginOnBottom={true}  />
                     <TimeScheduleSection />
                     <Divider marginOnTop={true} marginOnBottom={true} />
                     <ProjectsSection />
