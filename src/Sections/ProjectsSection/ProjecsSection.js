@@ -1,12 +1,12 @@
-import { Col, Container, Row } from "react-grid-system";
-import Slider from "react-slick";
-import React, { Component } from "react";
-import "../../../node_modules/slick-carousel/slick/slick.css";
-import "../../../node_modules/slick-carousel/slick/slick-theme.css";
-import "./ProjectsSection.scss";
-import StudentProject from "../../Components/StudentProject/StudentProject";
-import { getProjects } from "./Project";
-import H2 from "../../Components/H2/H2";
+import { Col, Container, Row } from 'react-grid-system';
+import Slider from 'react-slick';
+import React, { Component } from 'react';
+import '../../../node_modules/slick-carousel/slick/slick.css';
+import '../../../node_modules/slick-carousel/slick/slick-theme.css';
+import './ProjectsSection.scss';
+import StudentProject from '../../Components/StudentProject/StudentProject';
+import { getProjects } from '../../Data/studentProjects';
+import H2 from '../../Components/H2/H2';
 
 export default class ProjecsSection extends Component {
   settings = {
