@@ -37,3 +37,10 @@ body {
     filter: blur(10px);
     -webkit-filter: blur(10px);
 }
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

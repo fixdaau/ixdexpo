@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import Main from '../Pages/Main';
 import CompanySignup from '../Pages/CompanySignup';
 import PopupModal from '../Components/PopupModal/PopupModal';
+import FirebaseReadOut from '../Pages/FirebaseReadout';
 
 class App extends Component {
   state = {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route exact={true} path='/company-signup' render={() =>
             <CompanySignup changeModalVisibility={this.changeModalVisibility} />
           } />
+          <Route exact={true} path='/asjnanj1oijas0912kjd0asd901njf09ds12' component={FirebaseReadOut} />
         </div>
         {this.state.showModal && <PopupModal changeModalVisibility={this.changeModalVisibility} />}
       </div>
