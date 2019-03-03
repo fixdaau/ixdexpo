@@ -5,18 +5,21 @@ import { Link } from 'react-router-dom';
 const Button = (props) => {
 
   const goToDiv = url => {
-    if(url[0] !== '#') return;
+    if (url[0] !== '#') return;
 
     const elmnt = document.getElementById('interested-section');
-    elmnt.scrollIntoView({behavior: 'smooth'});
+    elmnt.scrollIntoView({ behavior: 'smooth' });
   }
 
   const getUrl = url => url[0] === '#' ? '/' : url;
-
+  
   return (
-    <Link to={getUrl(props.url)}>
-      <button onClick={() => { props.onClick(); goToDiv(props.url) }} className='button'>{props.children}</button>
-    </Link>
+    props.url && props.url.length ?
+      <Link to={getUrl(props.url)}>
+        <button onClick={() => { props.onClick(); goToDiv(props.url) }} className='button'>{props.children}</button>
+      </Link>
+      :
+      <button onClick={() => { props.onClick(); }} className='button'>{props.children}</button>
   );
 };
 

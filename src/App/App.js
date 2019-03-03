@@ -3,6 +3,7 @@ import './App.scss';
 import { Route } from 'react-router-dom';
 import Main from '../Pages/Main';
 import CompanySignup from '../Pages/CompanySignup';
+import Student from '../Pages/Student';
 import PopupModal from '../Components/PopupModal/PopupModal';
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route exact={true} path='/company-signup' render={() =>
             <CompanySignup changeModalVisibility={this.changeModalVisibility} />
           } />
+          <Route exact path='/student' component={Student} />
         </div>
         {this.state.showModal && <PopupModal changeModalVisibility={this.changeModalVisibility} />}
       </div>
