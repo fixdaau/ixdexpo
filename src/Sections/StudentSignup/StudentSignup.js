@@ -54,12 +54,10 @@ class StudentSignup extends Component {
             projectName: filterValue,
             currentStudentSemester: selectedSemester.value,
             projectSemester: projectSemester.value,
-            submitTime = parseInt((new Date().getTime() / 1000).toFixed(0))
+            submitTime: parseInt((new Date().getTime() / 1000).toFixed(0))
         }
 
         firebase.registerStudentProject(payload);
-
-        console.log(payload);
 
         setTimeout(
             () => {
@@ -143,10 +141,8 @@ class StudentSignup extends Component {
 
     render() {
         const { signedStudents, selectedSemester, signupProjectView, isLoading, isValidated, projectSemester, filterValue } = this.state;
-
         const filteredStudents = signedStudents.filter(s => this.applyFilter(s))
 
-        console.log(selectedSemester)
         return (
             <form ref={(el) => this.myFormRef = el}>
                 <Row justify='center'>
@@ -188,23 +184,25 @@ class StudentSignup extends Component {
                                             <div style={{ textAlign: 'center' }}>
                                                 <Button onClick={() => this.setState({ signupProjectView: true })}>
                                                     Sign up your project!
-                     </Button>
+                                                </Button>
                                             </div>
                                         </div>
                                         :
-                                        <div style={{ textAlign: 'center', paddingLeft: '80px', paddingRight: '80px', paddingTop: '32px' }}>
-                                            <img style={{ width: '100%' }} src={require('../../Images/Illustration-Topsection.svg')} alt='' />
-                                            <div style={{ textAlign: 'center' }}>
+                                        <div style={{ textAlign: 'center', paddingLeft: '88px', paddingRight: '88px', paddingTop: '32px' }}>
+                                            <img style={{ width: '100%' }} src={require('../../Images/marginalia-delete-confirmation.svg')} alt='' />
+                                            <div style={{ textAlign: 'center', marginTop: '24px' }}>
+                                                <p>This project doesn’t seem to be signed up.</p>
+                                                <div style={{marginBottom: '32px'}} />
                                                 <Button onClick={() => this.setState({ signupProjectView: true })}>
                                                     Sign up your project!
-                     </Button>
+                                                </Button>
                                             </div>
                                         </div>
                                     }
                                 </div>
                                 :
                                 <div style={{ textAlign: 'center', paddingLeft: '80px', paddingRight: '80px', paddingTop: '32px' }}>
-                                    <img style={{ width: '100%' }} src={require('../../Images/Illustration_Printout.svg')} alt='' />
+                                    <img style={{ width: '100%' }} src={require('../../Images/marginalia-navigation-support.svg')} alt='' />
                                 </div>
                             }
                         </Col>

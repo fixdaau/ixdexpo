@@ -2,7 +2,9 @@ import React from 'react';
 import './Button.scss';
 import { Link } from 'react-router-dom';
 
-const Button = (props) => {
+const Button = props => {
+  let className = 'button';
+  if (props.enrollButton) className += ' button-enroll';
 
   const goToDiv = url => {
     if (url[0] !== '#') return;
@@ -15,9 +17,17 @@ const Button = (props) => {
   
   return (
     props.url && props.url.length ?
-      <Link to={getUrl(props.url)}>
-        <button onClick={() => { props.onClick(); goToDiv(props.url) }} className='button'>{props.children}</button>
-      </Link>
+    <Link to={getUrl(props.url)}>
+      <button
+        onClick={() => {
+          props.onClick();
+          goToDiv(props.url);
+        }}
+        className={className}
+      >
+        {props.children}
+      </button>
+    </Link>
       :
       <button onClick={() => { props.onClick(); }} className='button'>{props.children}</button>
   );
