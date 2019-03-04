@@ -12,7 +12,7 @@ const Footer = () => {
                         <div className='large-text'>WHEN?</div>
                         <div className='description-text'>
                             <img src={require('../../Images/Icons_Calendar_White.svg')} alt=""/>
-                            April 3, 2019 <img style={{ marginLeft: '32px' }} src={require('../../Images/Icons_Time_White.svg')} alt=""/>15:00 - 20:00
+                            April 3rd, 2019 <img style={{ marginLeft: '32px' }} src={require('../../Images/Icons_Time_White.svg')} alt=""/>15:00 - 20:00
                             </div>
                         <div className='large-text'>WHERE?</div>
                         <div className='description-text'>
