@@ -16,7 +16,7 @@ const Footer = () => {
                             </div>
                         <div className='large-text'>WHERE?</div>
                         <div className='description-text'>
-                            <img src={require('../../Images/Icons_Location_White.svg')} alt=""/>
+                            <img className='footer-icon' src={require('../../Images/Icons_Location_White.svg')} />
                             Selma Lagerløfs Vej 300, 9000 Aalborg
                         </div>
                         <div className='large-text'>CONTACT</div>
