@@ -1,0 +1,13 @@
+.title-wrapper {
+    margin-bottom: 30px;
+}
+
+.slick-arrow {
+    display: none !important;
+}
+
+@media only screen and (max-width: 700px) {
+    .title-wrapper {
+        margin-bottom: 0px;
+    }
+}
