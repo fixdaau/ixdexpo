@@ -144,7 +144,7 @@ class CompanySignupSection extends Component {
               </Row>
             ))}
             <div className="line" />
-            <div className="fee-text">Company regsitration fee</div>
+            <div className="fee-text">Company registration fee</div>
             <div className="currency-text">DKK</div>
             <div className="price-text">500</div>
           </div>
@@ -154,7 +154,7 @@ class CompanySignupSection extends Component {
           <H2 alignment="left">Reserve your spot today!</H2>
           <div className="info-text">
             Don't worry if you are not sure how many you will attend, you can
-            allways update your information by writing to us!
+            always update your attendance by writing to us!
           </div>
           <form ref={el => (this.myFormRef = el)}>
             <input
