@@ -7,9 +7,9 @@ const Button = props => {
   if (props.enrollButton) className += ' button-enroll';
 
   const goToDiv = url => {
-    if (url[0] !== '#') return;
+    if (!url.includes('#')) return;
 
-    const elmnt = document.getElementById('interested-section');
+    const elmnt = document.getElementById(url.split('#')[1]);
     elmnt.scrollIntoView({ behavior: 'smooth' });
   }
 
@@ -29,7 +29,7 @@ const Button = props => {
       </button>
     </Link>
       :
-      <button onClick={() => { props.onClick(); }} className='button'>{props.children}</button>
+      <button onClick={(e) => { e.preventDefault(); props.onClick(); }} className={className}>{props.children}</button>
   );
 };
 

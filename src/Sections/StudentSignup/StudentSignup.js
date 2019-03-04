@@ -139,16 +139,18 @@ class StudentSignup extends Component {
         return semesters.slice(0, parseInt(selectedSemester.value)).reverse();
     }
 
+    enrollStudent = (id, title) => this.props.changeStudentModalVisibility(true, id, title, this.getProjects);
+
     render() {
         const { signedStudents, selectedSemester, signupProjectView, isLoading, isValidated, projectSemester, filterValue } = this.state;
         const filteredStudents = signedStudents.filter(s => this.applyFilter(s))
 
         return (
             <form ref={(el) => this.myFormRef = el}>
-                <Row justify='center'>
+                <Row justify='center' id="student-signup-section">
 
                     <Col xs={12}>
-                        <H2>{signupProjectView ? 'Sign it up!' : 'Find you project'}</H2>
+                        <H2>{signupProjectView ? 'Sign it up!' : 'Find your project'}</H2>
                     </Col>
                     <Col xs={0} sm={0} md={signupProjectView ? 4 : 3} />
                     <Col xs={12} md={signupProjectView ? 4 : 3}>
@@ -178,8 +180,8 @@ class StudentSignup extends Component {
                                 <div>
                                     {filteredStudents.length ?
                                         <div className='project-list-wrapper'>
-                                            {filteredStudents.map(s =>
-                                                <ProjectSignupCard key={s.id} title={s.data.projectName} students={s.data.students} projectId={s.id} />
+                                            {filteredStudents.map((s, i) =>
+                                                <ProjectSignupCard key={s.id} z={i} enrollStudent={this.enrollStudent} title={s.data.projectName} students={s.data.students} projectId={s.id} />
                                             )}
                                             <div style={{ textAlign: 'center' }}>
                                                 <Button onClick={() => this.setState({ signupProjectView: true })}>

@@ -41,7 +41,7 @@ const StudentSplashSection = () => {
           </div>
         </div>
         <div className='sign-up-stand'>
-          <Button url="" onClick={() => {}}>
+          <Button url="/student#student-signup-section" onClick={() => {}}>
             Sign up for a stand
           </Button>
         </div>
@@ -49,7 +49,7 @@ const StudentSplashSection = () => {
       <Col sm={12} md={5}>
         <img
           id="splashImg"
-          src={require("../../Images/StudentSplashImg.svg")}
+          src={require("../../Images/Illustration-Topsection.svg")}
           alt=""
         />
       </Col>
