@@ -1,4 +1,4 @@
-export const getProjects = () => ([
+export const getCompanyLogos = () => ([
     {
         imgSrc: 'bellis.jpg',
         title: 'Bellis',

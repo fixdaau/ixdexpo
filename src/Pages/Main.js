@@ -8,7 +8,7 @@ import ProjectsSection from '../Sections/ProjectsSection/ProjecsSection';
 import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
 import InterestedCompanySection from '../Sections/InterestedCompanySection/InterestedCompanySection';
 import InteractionDesignSection from '../Sections/InteractionDesignSection/InteractionDesignSection';
-
+import CompanyLogosSection from '../Sections/CompanyLogosSection/CompanyLogosSection';
 
 class Main extends Component {
     render() {
