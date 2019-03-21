@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 const ProjectSignupCard = ({ title, students, projectId, enrollStudent }) => {
     return (
         <div className='sign-up-card' >
-            <div style={{display: 'inline-block', width: '70%'}}>
+            <div style={{ width: '100%' }}>
                 <div className='project-card-title'>{title}</div>
                 {
                     students.map((s, i) =>
@@ -16,7 +16,8 @@ const ProjectSignupCard = ({ title, students, projectId, enrollStudent }) => {
                     )
                 }
             </div>
-            <span style={{ float: 'right' }}><Button enrollButton={true} onClick={() => enrollStudent(projectId, title)}>Enroll</Button></span>
+            <div style={{ position: 'absolute', top: '16px', right: '8px' }}><Button enrollButton={true} onClick={() => enrollStudent(projectId, title)}>Add student</Button></div>
+
         </div>
     );
 };

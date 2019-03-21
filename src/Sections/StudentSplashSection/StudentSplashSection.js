@@ -8,7 +8,7 @@ const StudentSplashSection = () => {
   return (
     <Row className="splash">
       <Col sm={12} md={7}>
-        <H1>Showcase your projects to industy leaders</H1>
+        <H1>Showcase your projects to industry leaders</H1>
         <p className="paragraph">
           We have invited the best in the business, we just need you to showcase
           your projects. IXD EXPO is your opportunity to get a head start on

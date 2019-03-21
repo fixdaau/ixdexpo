@@ -113,7 +113,7 @@ class StudentSignup extends Component {
         const { isValidated } = this.state;
 
         if (name === 'email') {
-            isValidated[name] = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value) ? 'valid' : 'invalid'; //this.companyInput.current.value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) ? 'validated' : 'invalid';
+            isValidated[name] = /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value) ? 'valid' : 'invalid'; //this.companyInput.current.value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) ? 'validated' : 'invalid';
             this.setState({ isValidated: isValidated })
         } else {
             isValidated[name] = value.toString().length > 0 ? 'valid' : 'invalid';
@@ -154,12 +154,12 @@ class StudentSignup extends Component {
                     </Col>
                     <Col xs={0} sm={0} md={signupProjectView ? 4 : 3} />
                     <Col xs={12} md={signupProjectView ? 4 : 3}>
-                        <Select className='select-input' value={selectedSemester} placeholder='Current semester' onChange={e => { this.setState({ selectedSemester: e }); this.validateFields('selectedSemester', e.value) }}
+                        <Select className='select-input' value={selectedSemester} placeholder='Year started' onChange={e => { this.setState({ selectedSemester: e }); this.validateFields('selectedSemester', e.value) }}
                             options={[
-                                { value: '10', label: '10th semester ' },
-                                { value: '8', label: '8th semester ' },
-                                { value: '6', label: '6th semester ' },
-                                { value: '4', label: '4th semester ' },
+                                { value: '10', label: '2014' },
+                                { value: '8', label: '2015' },
+                                { value: '6', label: '2016' },
+                                { value: '4', label: '2017' },
                             ]}
                         />
                     </Col>

@@ -54,8 +54,8 @@ class CompanySignupSection extends Component {
       ] = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
         value
       )
-        ? "valid"
-        : "invalid"; //this.companyInput.current.value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) ? 'validated' : 'invalid';
+          ? "valid"
+          : "invalid"; //this.companyInput.current.value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) ? 'validated' : 'invalid';
       this.setState({ isValidated: isValidated });
     } else {
       isValidated[name] = value.toString().length > 0 ? "valid" : "invalid";
@@ -148,6 +148,16 @@ class CompanySignupSection extends Component {
             <div className="currency-text">DKK</div>
             <div className="price-text">500</div>
           </div>
+          <Row>
+            <Col xs={12}>
+              <div style={{ textAlign: 'center', marginTop: '24px' }}>
+                <span className="license-text">
+                  *If you are a member of Infinit the event will be free
+            </span>
+              </div>
+            </Col>
+          </Row>
+
         </Col>
         <Col md={1} />
         <Col xs={12} sm={12} md={5} className="parent">
@@ -295,8 +305,8 @@ class CompanySignupSection extends Component {
                   alt=""
                 />
               ) : (
-                "Register for IXD EXPO"
-              )}
+                  "Register for IXD EXPO"
+                )}
             </button>
           </form>
         </Col>

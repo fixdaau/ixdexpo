@@ -30,9 +30,9 @@ export default class WeGotYourBackSection extends Component {
         </Col>
 
         <Hidden xs={true} sm={true}>
-          {this.weGotYouData.map(data => {
+          {this.weGotYouData.map((data, i) => {
             return (
-              <Col md={4}>
+              <Col key={i} md={4}>
                 <InfoPieceCard
                   iconSrc={data.iconSrc}
                   title={data.title}
@@ -46,9 +46,9 @@ export default class WeGotYourBackSection extends Component {
         <Hidden md={true} lg={true} xl={true}>
           <Col>
             <Slider {...this.settings}>
-              {this.weGotYouData.map(data => {
+              {this.weGotYouData.map((data, i) => {
                 return (
-                  <InfoPieceCard
+                  <InfoPieceCard key={i} 
                     iconSrc={data.iconSrc}
                     title={data.title}
                     text={data.text}

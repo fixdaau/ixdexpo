@@ -25,9 +25,9 @@ export default class WhatYouNeedSection extends Component {
         </Col>
 
         <Hidden xs={true} sm={true}>
-          {this.whatYouNeedData.map(data => {
+          {this.whatYouNeedData.map((data, i) => {
             return (
-              <Col md={4}>
+              <Col md={4} key={i} >
                 <InfoPieceCard
                   iconSrc={data.iconSrc}
                   title={data.title}
@@ -41,9 +41,9 @@ export default class WhatYouNeedSection extends Component {
         <Hidden md={true} lg={true} xl={true}>
           <Col>
             <Slider {...this.settings}>
-              {this.whatYouNeedData.map(data => {
+              {this.whatYouNeedData.map((data, i) => {
                 return (
-                  <InfoPieceCard
+                  <InfoPieceCard key={i} 
                     iconSrc={data.iconSrc}
                     title={data.title}
                     text={data.text}

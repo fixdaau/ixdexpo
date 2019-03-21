@@ -1,4 +1,4 @@
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Row } from 'react-grid-system';
 import Slider from 'react-slick';
 import React, { Component } from 'react';
 import '../../../node_modules/slick-carousel/slick/slick.css';

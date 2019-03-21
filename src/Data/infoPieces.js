@@ -9,13 +9,13 @@ export const getWhatYouNeed = () => [
     iconSrc: "Icon_Poster template.svg",
     title: "A Poster",
     text:
-      "Have a poster to focus the viewers attention on a visual element. The poster can also help you structure your pitch and perfect a coherent delivery."
+      "Have a poster to focus the viewer's attention on a visual element. The poster can also help you structure your pitch and perfect a coherent delivery."
   },
   {
     iconSrc: "Icons_Presentation.svg",
     title: "A demo",
     text:
-      "The companies want to see how you excute and transform insights to actual products. Design process tools can also be demonstrated."
+      "The companies want to see how you execute and transform insights into actual design. Design process tools can also be demonstrated."
   }
 ];
 
@@ -48,6 +48,6 @@ export const getWeGotYou = () => [
     iconSrc: "Icon_Accessories.svg",
     title: "EXPO stand accessories",
     text:
-      "We will provide you with accessiories for your stand. So if you need certain device to demo, a stand for a smartphone, or anything else, we will try to get it for you."
+      "We will provide you with accessories  for your stand. So if you need a certain device to demo, a stand for a smartphone, or anything else, we will try to get it for you."
   }
 ];
