@@ -16,7 +16,7 @@ const ProjectSignupCard = ({ title, students, projectId, enrollStudent }) => {
                     )
                 }
             </div>
-            <div style={{ position: 'absolute', top: '16px', right: '8px' }}><Button enrollButton={true} onClick={() => enrollStudent(projectId, title)}>Add student</Button></div>
+            {/* <div style={{ position: 'absolute', top: '16px', right: '8px' }}><Button enrollButton={true} onClick={() => enrollStudent(projectId, title)}>Add student</Button></div> */}
 
         </div>
     );

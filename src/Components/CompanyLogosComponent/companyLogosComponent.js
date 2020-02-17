@@ -1,14 +1,16 @@
 import React from "react";
 import "./companyLogosComponent.scss";
 
-const CompanyLogos = ({ imgSrc }) => {
+const CompanyLogos = ({ imgSrc, url }) => {
     return (
         <div className="logos">
-            <img className="img"
-                src={require(`../../Images/${imgSrc}`)}
-                alt="test"
-            />
-        </div> 
+            <a href={url} target="_blank">
+                <img className="logo-img"
+                    src={require(`../../Images/CompanyLogos/${imgSrc}`)}
+                    alt="test"
+                />
+            </a>
+        </div>
     );
 };
 

@@ -18,6 +18,8 @@ class Main extends Component {
                 <Container>
                     <SplashSection />
                     <Divider marginOnTop={true} marginOnBottom={true} />
+                    <CompanyLogosSection />
+                    <Divider marginOnTop={true} marginOnBottom={true} />
                     <InteractionDesignSection />
                     <Divider marginOnTop={true} marginOnBottom={true}  />
                     <TimeScheduleSection />

@@ -12,6 +12,7 @@ export default class ProjecsSection extends Component {
   settings = {
     dots: true,
     infinite: false,
+    arrows: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -51,6 +52,7 @@ export default class ProjecsSection extends Component {
             {this.projectData.map(project => {
               return (
                 <StudentProject
+                  key={project.title}
                   title={project.title}
                   description={project.description}
                   imgSrc={project.imgSrc}

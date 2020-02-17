@@ -8,6 +8,7 @@ import Divider from '../Components/Divider/Divider';
 import WhatYouNeedSection from '../Sections/WhatYouNeedSection/WhatYouNeedSection';
 import WeGotYourBackSection from '../Sections/WeGotYourBackSection/WeGotYourBackSection';
 import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
+import CompanyLogosSection from '../Sections/CompanyLogosSection/CompanyLogosSection';
 
 const Student = (props) => {
     return (
@@ -15,6 +16,8 @@ const Student = (props) => {
             <Header />
             <Container>
                 <StudentSplashSection />
+                <Divider marginOnTop={true} marginOnBottom={true} />
+                <CompanyLogosSection />
                 <Divider marginOnTop={true} marginOnBottom={true} />
                 <TimeScheduleSection />
                 <Divider marginOnTop={true} marginOnBottom={true} />

@@ -195,9 +195,9 @@ class StudentSignup extends Component {
                                             <div style={{ textAlign: 'center', marginTop: '24px' }}>
                                                 <p>This project doesn’t seem to be signed up.</p>
                                                 <div style={{marginBottom: '32px'}} />
-                                                <Button onClick={() => this.setState({ signupProjectView: true })}>
+                                                {/* <Button onClick={() => this.setState({ signupProjectView: true })}>
                                                     Sign up your project!
-                                                </Button>
+                                                </Button> */}
                                             </div>
                                         </div>
                                     }
@@ -231,13 +231,13 @@ class StudentSignup extends Component {
                             <Col xs={0} sm={0} md={4} />
                             <Col xs={12} sm={12} md={4}>
                                 <div style={{ textAlign: 'center' }}>
-                                    <button
+                                    {/* <button
                                         className='submit-button'
                                         disabled={!(Object.keys(isValidated).every(k => isValidated[k] === 'valid'))}
                                         onClick={e => { e.preventDefault(); this.addProject() }}
                                     >
                                         {isLoading ? <img style={{ height: '48px', marginTop: '-16px' }} src={require('../../Images/Loading.svg')} alt='' /> : 'Sign up your project!'}
-                                    </button>
+                                    </button> */}
                                 </div>
                             </Col>
                         </>

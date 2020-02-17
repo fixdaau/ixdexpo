@@ -1,22 +1,42 @@
 export const getCompanyLogos = () => ([
     {
-        imgSrc: 'bellis.jpg',
-        title: 'Bellis',
-        description: 'Helping plant owners not killing their plants, while providing better indoor-climate using plants own self-cleaning capabilities.'
+        imgSrc: 'creuna.svg',
+        url: 'https://www.creuna.com/dk/',
     },
     {
-        imgSrc: 'storyblocks.png',
-        title: 'StoryBlocks',
-        description: 'A tangible programming language for teaching primary school children Computational Thinking through storytelling.'
+        imgSrc: 'timeadvice.png',
+        url: 'http://www.timeadvice.dk/',
     },
     {
-        imgSrc: 'eia.jpg',
-        title: 'EIA',
-        description: 'An ML-based personal assistant for a Medical Secretary designed and developed to augment trivial tasks in a Hospital Ward.'
+        imgSrc: 'Combine.svg',
+        url: 'https://combine.dk/',
     },
     {
-        imgSrc: 'Tempus1.png',
-        title: 'Tempus',
-        description: 'An interactive physical time managing tool for streamlining meetings through dynamic visualisation of time.'
+        imgSrc: 'tia.svg',
+        url: 'https://tiatechnology.com/',
+    },
+    {
+        imgSrc: 'usertribe.png',
+        url: 'https://usertribe.com/',
+    },
+    {
+        imgSrc: 'rohde.svg',
+        url: 'https://www.rohde-schwarz.com/dk/home_48230.html',
+    },
+    {
+        imgSrc: 'kamstrup.svg',
+        url: 'https://www.kamstrup.com/da-dk',
+    },
+    {
+        imgSrc: 'stabil-it.png',
+        url: 'http://stabil-it.dk/forside'
+    },
+    {
+        imgSrc: 'itminds.png',
+        url: 'https://it-minds.dk/'
+    },
+    {
+        imgSrc: 'flexdanmark.png',
+        url: 'https://www.flexdanmark.dk/'
     },
 ])
