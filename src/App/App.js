@@ -33,10 +33,10 @@ class App extends Component {
       <div id='modal-container'>
         <div id='app' className={showModal || showStudentModal ? 'add-blur' : ''}>
           <Route exact={true} path='/' component={Main} />
-          <Route exact={true} path='/company-signup' render={() =>
+          {/* <Route exact={true} path='/company-signup' render={() =>
             <CompanySignup changeModalVisibility={this.changeModalVisibility} />
-          } />
-          <Route exact={true} path='/asjnanj1oijas0912kjd0asd901njf09ds12' component={FirebaseReadOut} />
+          } /> */}
+          {/* <Route exact={true} path='/asjnanj1oijas0912kjd0asd901njf09ds12' component={FirebaseReadOut} /> */}
           <Route exact path='/student' render={() =>
             <Student changeStudentModalVisibility={this.changeStudentModalVisibility} />
           } />

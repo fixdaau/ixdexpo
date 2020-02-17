@@ -7,13 +7,18 @@ const Button = props => {
   if (props.enrollButton) className += ' button-enroll';
 
   const goToDiv = url => {
-    if (!url.includes('#')) return;
+    if (!url.includes('#')) window.location.href = url;
 
     const elmnt = document.getElementById(url.split('#')[1]);
     elmnt.scrollIntoView({ behavior: 'smooth' });
   }
 
-  const getUrl = url => url[0] === '#' ? '/' : url;
+  const getUrl = url => {
+      return '/';
+    
+    console.log(url[0] === '#' ? '/' : url);
+    return url[0] === '#' ? '/' : url;
+  }
   
   return (
     props.url && props.url.length ?

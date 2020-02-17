@@ -92,6 +92,7 @@ class StudentSignup extends Component {
 
     applyFilter = project => {
         const { filterValue, selectedSemester } = this.state;
+        if(!project.data.projectName) return;
         return (selectedSemester.value === project.data.currentStudentSemester) &&
             project.data.projectName.toLowerCase().includes(filterValue.toLowerCase())
     }
@@ -195,9 +196,9 @@ class StudentSignup extends Component {
                                             <div style={{ textAlign: 'center', marginTop: '24px' }}>
                                                 <p>This project doesn’t seem to be signed up.</p>
                                                 <div style={{marginBottom: '32px'}} />
-                                                {/* <Button onClick={() => this.setState({ signupProjectView: true })}>
+                                                <Button onClick={() => this.setState({ signupProjectView: true })}>
                                                     Sign up your project!
-                                                </Button> */}
+                                                </Button>
                                             </div>
                                         </div>
                                     }
@@ -225,19 +226,19 @@ class StudentSignup extends Component {
                             <Col xs={0} sm={0} md={4} />
                             <Col xs={0} sm={0} md={4} />
                             <Col xs={12} md={4}>
-                                {/* {signupProjectView && <div style={{ marginTop: '16px' }} />} */}
+                                {signupProjectView && <div style={{ marginTop: '16px' }} />}
                                 <input className={'input' + this.getValidationClass(isValidated.email)} placeholder='Email' onInput={e => { this.setState({ email: e.target.value }); this.validateFields('email', e.target.value) }} />
                             </Col>
                             <Col xs={0} sm={0} md={4} />
                             <Col xs={12} sm={12} md={4}>
                                 <div style={{ textAlign: 'center' }}>
-                                    {/* <button
+                                    <button
                                         className='submit-button'
                                         disabled={!(Object.keys(isValidated).every(k => isValidated[k] === 'valid'))}
                                         onClick={e => { e.preventDefault(); this.addProject() }}
                                     >
                                         {isLoading ? <img style={{ height: '48px', marginTop: '-16px' }} src={require('../../Images/Loading.svg')} alt='' /> : 'Sign up your project!'}
-                                    </button> */}
+                                    </button>
                                 </div>
                             </Col>
                         </>

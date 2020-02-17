@@ -16,8 +16,8 @@ const Student = (props) => {
             <Header />
             <Container>
                 <StudentSplashSection />
-                <Divider marginOnTop={true} marginOnBottom={true} />
-                <CompanyLogosSection />
+                {/* <Divider marginOnTop={true} marginOnBottom={true} />
+                <CompanyLogosSection /> */}
                 <Divider marginOnTop={true} marginOnBottom={true} />
                 <TimeScheduleSection />
                 <Divider marginOnTop={true} marginOnBottom={true} />

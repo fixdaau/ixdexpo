@@ -21,7 +21,7 @@ const SplashSection = () => {
               src={require('../../Images/Icons_Calendar.svg')}
               alt="Calendar"
             />
-            <p>April 3, 2019</p>
+            <p>March 20, 2020</p>
           </div>
           <div>
             <img
@@ -29,7 +29,7 @@ const SplashSection = () => {
               src={require('../../Images/Icons_Time.svg')}
               alt="Time"
             />
-            <p>15:00 - 20:00</p>
+            <p>13:00 - 19:00</p>
           </div>
           <div>
             <img
@@ -41,8 +41,8 @@ const SplashSection = () => {
           </div>
         </div>
         <div>
-          <Button url="#interested-section" onClick={() => {}}>
-            Sign up for an invitation
+          <Button url="https://www.brainsbusiness.dk/dk/arrangementer/brainsbusiness-arrangementer/moed-fremtidens-interaktionsdesignere-paa-ixd-expo---aalborg.htm" onClick={() => {}}>
+            Sign up for EXPO!
           </Button>
         </div>
       </Col>
