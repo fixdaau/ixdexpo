@@ -14,10 +14,11 @@ const Button = props => {
   }
 
   const getUrl = url => {
-      return '/';
-    
-    console.log(url[0] === '#' ? '/' : url);
-    return url[0] === '#' ? '/' : url;
+    if(url[0] === 'h') {
+      return '/'
+    }
+
+    return url;
   }
   
   return (
