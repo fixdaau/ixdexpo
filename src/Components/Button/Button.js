@@ -8,6 +8,7 @@ const Button = props => {
   if (props.primaryButton) className += ' button-primary';
   if (props.secondaryButton) className += ' button-secondary';
   if (props.ghostButton) className += ' button-ghost';
+  if (props.smallWhiteButton) className += ' button-swhite';
 
   const goToDiv = url => {
     if (!url.includes('#')) window.location.href = url;
