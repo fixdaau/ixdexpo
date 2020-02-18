@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Row, Container } from "react-grid-system";
-import { Link } from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import H1 from "../../Components/H1/H1";
 import "./SplashSection.scss";
@@ -37,6 +36,7 @@ const SplashSection = () => {
             </Button>
           </Col>
         </Row>
+        <Row className="splash-company-container"></Row>
       </Container>
     </div>
   );

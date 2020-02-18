@@ -1,59 +1,38 @@
 import React from "react";
-import { Col, Row } from "react-grid-system";
+import { Col, Row, Container } from "react-grid-system";
 import Button from "../../Components/Button/Button";
 import H1 from "../../Components/H1/H1";
 import "./StudentSplashSection.scss";
+import Header from "../../Components/Header/Header";
 
 const StudentSplashSection = () => {
   return (
-    <Row className="splash">
-      <Col sm={12} md={7}>
-        <H1>Showcase your projects to industry leaders</H1>
-        <p className="paragraph">
-          We have invited the best in the business, we just need you to showcase
-          your projects. IXD EXPO is your opportunity to get a head start on
-          your career.
-        </p>
-        <div className="information">
-          <div>
-            <img
-              className="icon"
-              src={require("../../Images/Icons_Calendar.svg")}
-              alt="Calendar"
-            />
-            <p>March 20, 2020</p>
-          </div>
-          <div>
-            <img
-              className="icon"
-              src={require("../../Images/Icons_Time.svg")}
-              alt="Time"
-            />
-            <p>13:00 - 19:00</p>
-          </div>
-          <div>
-            <img
-              className="icon"
-              src={require("../../Images/Icons_Location.svg")}
-              alt="Location"
-            />
-            <p>Selma Lagerløfs Vej 300</p>
-          </div>
-        </div>
-        <div className='sign-up-stand'>
-          <Button url="/student#student-signup-section" onClick={() => {}}>
-            Sign up for a stand
-          </Button>
-        </div>
-      </Col>
-      <Col sm={12} md={5}>
-        <img
-          id="splashImg"
-          src={require("../../Images/Illustration-Topsection.svg")}
-          alt=""
-        />
-      </Col>
-    </Row>
+    <div className="modal-container student-splash-bg">
+      <Header />
+      <Container>
+        <Row className="splash">
+          <Col sm={10} md={10}>
+            <H1>Showcase your projects to industry leaders</H1>
+            <p className="paragraph">
+              IxD EXPO is your opportunity to get a head start on your career
+            </p>
+          </Col>
+        </Row>
+
+        <Row className="splash splash-button-container">
+          <Col sm={6} md={3} className="splash-buttons">
+            <Button
+              type={"primary"}
+              url="https://www.brainsbusiness.dk/dk/arrangementer/brainsbusiness-arrangementer/moed-fremtidens-interaktionsdesignere-paa-ixd-expo---aalborg.htm"
+              onClick={() => {}}
+            >
+              Sign up for a stand
+            </Button>
+          </Col>
+        </Row>
+        <Row className="splash-company-container"></Row>
+      </Container>
+    </div>
   );
 };
 
