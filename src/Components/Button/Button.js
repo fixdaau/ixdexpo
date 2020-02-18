@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 const Button = props => {
   let className = 'button';
   if (props.enrollButton) className += ' button-enroll';
+  if (props.primaryButton) className += ' button-primary';
+  if (props.secondaryButton) className += ' button-secondary';
+  if (props.ghostButton) className += ' button-ghost';
 
   const goToDiv = url => {
     if (!url.includes('#')) window.location.href = url;
