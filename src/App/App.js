@@ -15,37 +15,58 @@ class App extends Component {
     title: '',
     id: '',
     getProjects: () => {}
-  }
+  };
 
   changeModalVisibility = showModal => this.setState({ showModal: showModal });
 
-  changeStudentModalVisibility = (showModal, id, title, getProjects) => this.setState({
-    showStudentModal: showModal,
-    title: title,
-    id: id,
-    getProjects: getProjects
-  });
+  changeStudentModalVisibility = (showModal, id, title, getProjects) =>
+    this.setState({
+      showStudentModal: showModal,
+      title: title,
+      id: id,
+      getProjects: getProjects
+    });
 
   render() {
     const { showModal, showStudentModal, title, id, getProjects } = this.state;
 
     return (
-      <div id='modal-container'>
-        <div id='app' className={showModal || showStudentModal ? 'add-blur' : ''}>
-          <Route exact={true} path='/' component={Main} />
-          {/* <Route exact={true} path='/company-signup' render={() =>
+      <>
+        <div id='modal-container'>
+          <div
+            id='app'
+            //className={showModal || showStudentModal ? "add-blur" : ""}
+          >
+            <Route exact={true} path='/' component={Main} />
+            {/* <Route exact={true} path='/company-signup' render={() =>
             <CompanySignup changeModalVisibility={this.changeModalVisibility} />
           } /> */}
-          {/* <Route exact={true} path='/asjnanj1oijas0912kjd0asd901njf09ds12' component={FirebaseReadOut} /> */}
-          <Route exact path='/student' render={() =>
-            <Student changeStudentModalVisibility={this.changeStudentModalVisibility} />
-          } />
+            {/* <Route exact={true} path='/asjnanj1oijas0912kjd0asd901njf09ds12' component={FirebaseReadOut} /> */}
+            <Route
+              exact
+              path='/student'
+              render={() => (
+                <Student
+                  changeStudentModalVisibility={
+                    this.changeStudentModalVisibility
+                  }
+                />
+              )}
+            />
+          </div>
+          {showModal && (
+            <PopupModal changeModalVisibility={this.changeModalVisibility} />
+          )}
+          {showStudentModal && (
+            <StudentPopupModal
+              projectTitle={title}
+              projectId={id}
+              changeStudentModalVisibility={this.changeStudentModalVisibility}
+              getProjects={getProjects}
+            />
+          )}
         </div>
-        {showModal && <PopupModal changeModalVisibility={this.changeModalVisibility} />}
-        {showStudentModal &&
-          <StudentPopupModal projectTitle={title} projectId={id} changeStudentModalVisibility={this.changeStudentModalVisibility} getProjects={getProjects} />
-        }
-      </div>
+      </>
     );
   }
 }

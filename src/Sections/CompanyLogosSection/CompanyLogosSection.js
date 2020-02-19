@@ -2,25 +2,21 @@ import React, { Component } from "react";
 import "./CompanyLogosSection.scss";
 import { Col, Row } from "react-grid-system";
 import CompanyLogos from "../../Components/CompanyLogosComponent/companyLogosComponent";
-import { getCompanyLogos } from "../../Data/companyLogosData";
-import H2 from '../../Components/H2/H2';
+import { getCompanyLogos2020 } from "../../Data/companyLogosData";
 
-export default class CompanyLogosSection extends Component {
+const CompanyLogosSection = () => {
+  const companyLogos = getCompanyLogos2020();
+  return (
+    <Col xs={12} style={{ textAlign: "center" }}>
+      {companyLogos.map(company => (
+        <CompanyLogos
+          key={company.imgSrc}
+          imgSrc={company.imgSrc}
+          url={company.url}
+        />
+      ))}
+    </Col>
+  );
+};
 
-    companyLogos = getCompanyLogos();
-
-    render() {
-        return (
-            <Row>
-                <Col xs={12} className="header-wrapper">
-                    <H2>These companies have already signed up</H2>
-                </Col>
-                <Col xs={12} style={{ textAlign: 'center' }}>
-                    {this.companyLogos.map(company =>
-                        <CompanyLogos key={company.imgSrc} imgSrc={company.imgSrc} url={company.url} />
-                    )}
-                </Col>
-            </Row>
-        );
-    }
-}
+export default CompanyLogosSection;
