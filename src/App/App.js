@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import "./App.scss";
-import { Route } from "react-router-dom";
-import Main from "../Pages/Main";
-import CompanySignup from "../Pages/CompanySignup";
-import Student from "../Pages/Student";
-import PopupModal from "../Components/PopupModal/PopupModal";
-import FirebaseReadOut from "../Pages/FirebaseReadout";
-import StudentPopupModal from "../Components/StudentPopupModal/StudentPopupModal";
+import React, { Component } from 'react';
+import './App.scss';
+import { Route } from 'react-router-dom';
+import Main from '../Pages/Main';
+import CompanySignup from '../Pages/CompanySignup';
+import Student from '../Pages/Student';
+import PopupModal from '../Components/PopupModal/PopupModal';
+import FirebaseReadOut from '../Pages/FirebaseReadout';
+import StudentPopupModal from '../Components/StudentPopupModal/StudentPopupModal';
 
 class App extends Component {
   state = {
     showModal: false,
     showStudentModal: false,
-    title: "",
-    id: "",
+    title: '',
+    id: '',
     getProjects: () => {}
   };
 
@@ -32,19 +32,19 @@ class App extends Component {
 
     return (
       <>
-        <div id="modal-container">
+        <div id='modal-container'>
           <div
-            id="app"
+            id='app'
             //className={showModal || showStudentModal ? "add-blur" : ""}
           >
-            <Route exact={true} path="/" component={Main} />
+            <Route exact={true} path='/' component={Main} />
             {/* <Route exact={true} path='/company-signup' render={() =>
             <CompanySignup changeModalVisibility={this.changeModalVisibility} />
           } /> */}
             {/* <Route exact={true} path='/asjnanj1oijas0912kjd0asd901njf09ds12' component={FirebaseReadOut} /> */}
             <Route
               exact
-              path="/student"
+              path='/student'
               render={() => (
                 <Student
                   changeStudentModalVisibility={
