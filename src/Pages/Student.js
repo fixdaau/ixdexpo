@@ -18,16 +18,11 @@ const Student = (props) => {
                 <StudentSplashSection />
                 {/* <Divider marginOnTop={true} marginOnBottom={true} />
                 <CompanyLogosSection /> */}
-                <Divider marginOnTop={true} marginOnBottom={true} />
                 <TimeScheduleSection />
-                <Divider marginOnTop={true} marginOnBottom={true} />
                 <WhatYouNeedSection />
-                <Divider marginOnTop={true} marginOnBottom={true} />
                 <WeGotYourBackSection />
-                <Divider marginOnTop={true} marginOnBottom={true} />
                 <StudentSignup changeStudentModalVisibility={props.changeStudentModalVisibility} />
             </Container>
-            <Footer />
         </>
     );
 };
