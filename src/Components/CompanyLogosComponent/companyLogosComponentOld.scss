@@ -1,0 +1,14 @@
+.logos {
+  display: inline-block;
+}
+
+.logo-img {
+  height: 50px;
+  margin: 0 32px;
+  margin-bottom: 48px;
+  animation: all 1s ease-in-out;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
