@@ -10,26 +10,25 @@ import WeGotYourBackSection from '../Sections/WeGotYourBackSection/WeGotYourBack
 import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
 import CompanyLogosSection from '../Sections/CompanyLogosSection/CompanyLogosSection';
 
-const Student = (props) => {
-    return (
-        <>
-            <Header />
-            <Container>
-                <StudentSplashSection />
-                {/* <Divider marginOnTop={true} marginOnBottom={true} />
+const Student = props => {
+  return (
+    <>
+      <StudentSplashSection />
+      {/* <Divider marginOnTop={true} marginOnBottom={true} />
                 <CompanyLogosSection /> */}
-                <Divider marginOnTop={true} marginOnBottom={true} />
-                <TimeScheduleSection />
-                <Divider marginOnTop={true} marginOnBottom={true} />
-                <WhatYouNeedSection />
-                <Divider marginOnTop={true} marginOnBottom={true} />
-                <WeGotYourBackSection />
-                <Divider marginOnTop={true} marginOnBottom={true} />
-                <StudentSignup changeStudentModalVisibility={props.changeStudentModalVisibility} />
-            </Container>
-            <Footer />
-        </>
-    );
+      <Divider marginOnTop={true} marginOnBottom={true} />
+      <TimeScheduleSection />
+      <Divider marginOnTop={true} marginOnBottom={true} />
+      <WhatYouNeedSection />
+      <Divider marginOnTop={true} marginOnBottom={true} />
+      <WeGotYourBackSection />
+      <Divider marginOnTop={true} marginOnBottom={true} />
+      <StudentSignup
+        changeStudentModalVisibility={props.changeStudentModalVisibility}
+      />
+      <Footer />
+    </>
+  );
 };
 
 export default Student;
