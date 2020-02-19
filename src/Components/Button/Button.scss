@@ -1,42 +1,42 @@
-.button {
-    background-color: #0000ff;
-    color: white;
-    border-radius: 60px;
-    border-style: none;
-    transition: 200ms;
-    outline: none;
-    font-family: "Medium";
-    font-size: 18px;
-    padding: 22px 32px;
-    display: inline-block;
-    cursor: pointer;
-}
+// .button {
+//     background-color: #0000ff;
+//     color: white;
+//     border-radius: 60px;
+//     border-style: none;
+//     transition: 200ms;
+//     outline: none;
+//     font-family: "Medium";
+//     font-size: 18px;
+//     padding: 22px 32px;
+//     display: inline-block;
+//     cursor: pointer;
+// }
 
-.button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 255, 0.25);
-}
+// .button:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0 0 10px 0 rgba(0, 0, 255, 0.25);
+// }
 
-.button:disabled {
-    background-color: #bfbfbf;
-}
+// .button:disabled {
+//     background-color: #bfbfbf;
+// }
 
-.button:active {
-    transform: scale(1);
-}
+// .button:active {
+//     transform: scale(1);
+// }
 
-.button-enroll {
-    color: #0000ff;
-    background-color: white;
-    border-radius: 0;
-    padding: 8px 16px 4px 16px;
-}
+// .button-enroll {
+//     color: #0000ff;
+//     background-color: white;
+//     border-radius: 0;
+//     padding: 8px 16px 4px 16px;
+// }
 
-.button-enroll:hover {
-    border-radius: 100px;
-    box-shadow: none;
-    background: rgba(0, 0, 255, 0.12);
-}
+// .button-enroll:hover {
+//     border-radius: 100px;
+//     box-shadow: none;
+//     background: rgba(0, 0, 255, 0.12);
+// }
 
 .button-primary{
     // display: flex;
@@ -44,9 +44,10 @@
     width: 147px;
     height: 46px;
     padding: 12px 10px;
-    // position: relative;
+    position: relative;
     background: #FFFFFF;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+    border: 0px;
+    // box-shadow: none;
     border-radius: 4px;
     // font-family: DIN Next LT Pro;
     font-style: normal;
@@ -55,11 +56,13 @@
     line-height: 22px;
     align-items: center;
     text-align: center;
-    color: rgba(0, 0, 0, 0.72);
+    color: #000080;
+    opacity: 0.72;
 }
 
 .button-primary:hover{
     background: linear-gradient(0deg, rgba(0, 0, 128, 0.04), rgba(0, 0, 128, 0.04)), #FFFFFF;
+    box-shadow: none;
 }
 
 .button-primary:disabled{
