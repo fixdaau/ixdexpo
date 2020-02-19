@@ -1,0 +1,96 @@
+.small-card {
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 10px 44px 0 rgba(0, 0, 0, 0.1);
+    // margin-bottom: 16px;
+}
+
+.small-card-text {
+    font-family: "Bold";
+    font-size: 24px;
+    color: #22224b;
+}
+
+.small-card-time {
+    float: right;
+    margin-top: 4px;
+    font-size: 18px;
+    font-family: 'Medium';
+    color: #7c7ca5;
+}
+
+.card-section {
+    margin: 24px 0px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .small-card-text {
+        font-size: 18px;
+    }
+
+    .small-card-time {
+        font-size: 14px;
+    }
+
+}
+
+.time-schedule-container {
+    background-color: white;
+}
+
+.time-span {
+    font-family: 'Share Tech Mono';
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.72);
+    margin-top: 74px;
+    margin-bottom: 16px;
+}
+
+.time-span-mobile {
+    font-family: 'Share Tech Mono';
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.72);
+    margin-top: 64px;
+    margin-bottom: 16px;
+}
+
+.time-title {
+    font-family: "Joschmi";
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: #00003D;
+    margin-bottom: 16px;
+}
+
+.time-description {
+    font-family: "DIN Next LT Pro";
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 61, 0.8);
+}
+
+.time-image {
+    height: 310px;
+    border-radius: 4px;
+}
+
+.time-image-mobile {
+    margin-top: 24px;
+    border-radius: 4px;
+}
+
+.time-row {
+    margin-bottom: 120px;
+}
+
+.time-row-mobile {
+    margin-bottom: 0px;
+}
