@@ -13,6 +13,7 @@
     url(../../Images/CompanySplashImage.jpeg);
   background-blend-mode: normal, multiply, color, normal;
   background-size: cover;
+  min-height: 100vh;
 }
 .paragraph {
   font-family: DIN Next LT Pro;
@@ -26,6 +27,17 @@
 .splash-button-container {
   margin-top: 6em;
   margin-bottom: 2em;
+}
+
+.splash-company-paragraph {
+  font-family: Share Tech Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /*

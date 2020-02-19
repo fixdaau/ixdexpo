@@ -30,7 +30,14 @@ const StudentSplashSection = () => {
             </Button>
           </Col>
         </Row>
-        <Row className="splash-company-container"></Row>
+        <Row className="splash-company-container">
+          <Col xs={12} md={12}>
+            <p className="splash-company-paragraph">
+              Prepare to meet these companies and many more
+            </p>
+          </Col>
+          <Col xs={12} md={12}></Col>
+        </Row>
       </Container>
     </div>
   );

@@ -1,13 +1,13 @@
 import React from "react";
-import "./companyLogosComponent.scss";
+import "./companyLogosComponentOld.scss";
 
-const CompanyLogos = ({ imgSrc, url }) => {
+const CompanyLogosOld = ({ imgSrc, url }) => {
   return (
     <div className="logos">
       <a href={url} target="_blank">
         <img
           className="logo-img"
-          src={require(`../../Images/CompanyLogos2020/${imgSrc}`)}
+          src={require(`../../Images/CompanyLogos/${imgSrc}`)}
           alt="test"
         />
       </a>
@@ -15,4 +15,4 @@ const CompanyLogos = ({ imgSrc, url }) => {
   );
 };
 
-export default CompanyLogos;
+export default CompanyLogosOld;

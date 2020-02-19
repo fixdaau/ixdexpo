@@ -1,28 +1,29 @@
-import React from 'react';
-import './Button.scss';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./Button.scss";
+import { Link } from "react-router-dom";
 
 const Button = props => {
-  let className = 'button';
-  if (props.enrollButton) className += ' button-enroll';
+  let className = "button";
+  if (props.enrollButton) className += " button-enroll";
 
   const goToDiv = url => {
-    if (!url.includes('#')) window.location.href = url;
+    if (url.includes("https")) window.location.href = url;
 
-    const elmnt = document.getElementById(url.split('#')[1]);
-    elmnt.scrollIntoView({ behavior: 'smooth' });
-  }
+    if (url.includes("#")) {
+      const elmnt = document.getElementById(url.split("#")[1]);
+      elmnt.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const getUrl = url => {
-    if(url[0] === 'h') {
-      return '/'
+    if (url[0] === "h") {
+      return "/";
     }
 
     return url;
-  }
-  
-  return (
-    props.url && props.url.length ?
+  };
+
+  return props.url && props.url.length ? (
     <Link to={getUrl(props.url)}>
       <button
         onClick={() => {
@@ -34,8 +35,16 @@ const Button = props => {
         {props.children}
       </button>
     </Link>
-      :
-      <button onClick={(e) => { e.preventDefault(); props.onClick(); }} className={className}>{props.children}</button>
+  ) : (
+    <button
+      onClick={e => {
+        e.preventDefault();
+        props.onClick();
+      }}
+      className={className}
+    >
+      {props.children}
+    </button>
   );
 };
 

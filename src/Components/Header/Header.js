@@ -15,9 +15,9 @@ const Header = props => {
             <img
               src={require("../../Images/Logo.svg")}
               alt="Logo"
-              height="56"
-              width="240"
-              style={{ marginTop: "64px" }}
+              height="24"
+              width="116.43"
+              style={{ marginTop: "48px" }}
             />
           </div>
         </Col>
