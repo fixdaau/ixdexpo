@@ -1,39 +1,173 @@
-.button {
-    background-color: #0000ff;
-    color: white;
-    border-radius: 60px;
-    border-style: none;
-    transition: 200ms;
-    outline: none;
-    font-family: "Medium";
-    font-size: 18px;
-    padding: 22px 32px;
-    display: inline-block;
-    cursor: pointer;
+.button-primary{
+    padding: 12px 20px;
+    position: relative;
+    background: #FFFFFF;
+    border: 0px;
+    border-radius: 4px;
+    font-family: DIN Next LT Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    color: #000080;
+    opacity: 0.72;
 }
 
-.button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 255, 0.25);
+.button-primary:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 128, 0.04), rgba(0, 0, 128, 0.04)), #FFFFFF;
 }
 
-.button:disabled {
-    background-color: #bfbfbf;
+.button-primary:disabled{
+    background: #E1E1E1;
+    color: #00003D;
+    opacity: 0.32;
 }
 
-.button:active {
-    transform: scale(1);
+.button-primary:active{
+    background: linear-gradient(0deg, rgba(0, 0, 128, 0.04), rgba(0, 0, 128, 0.04)), #FFFFFF;
+    color: #000080;
 }
 
-.button-enroll {
-    color: #0000ff;
-    background-color: white;
-    border-radius: 0;
-    padding: 8px 16px 4px 16px;
+.button-primary:focus{
+    background: linear-gradient(0deg, rgba(0, 0, 61, 0.12), rgba(0, 0, 61, 0.12)), #FFFFFF;
+    border: 1px solid #000080;
+    box-sizing: border-box;
 }
 
-.button-enroll:hover {
-    border-radius: 100px;
-    box-shadow: none;
-    background: rgba(0, 0, 255, 0.12);
+
+
+.button-secondary{
+    padding: 12px 20px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: DIN Next LT Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0);
+    color: #FFFFFF;
 }
+
+.button-secondary:hover{
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    color: #000080;
+}
+
+.button-secondary:disabled{
+    background: rgba(225, 225, 225, 0.24);
+    border: 1px solid rgba(225, 225, 225, 0.24);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #E1E1E1;
+    opacity: 0.24;
+}
+
+.button-secondary:focus{
+    background: rgba(255, 255, 255, 0.24);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+.button-secondary:active{
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #FFFFFF;
+    color: #000080;
+}
+
+.button-ghost{
+    padding: 8px 12px;
+    background: rgba(0, 0, 255, 0);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Share Tech Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.button-ghost:hover{
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #000080;
+}
+
+.button-ghost:disabled{
+    background: rgba(225, 225, 225, 0.24);
+    border: 1px solid rgba(225, 225, 225, 0.24);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #E1E1E1;
+    opacity: 0.24;
+}
+
+.button-ghost:focus{
+    background: rgba(255, 255, 255, 0.24);
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.button-ghost:active{
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #FFFFFF;
+    color: #000080;
+}
+
+.button-swhite{
+    padding: 8px 10px;
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 4px;
+    position: absolute;
+    font-family: Share Tech Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000080;
+    opacity: 0.72;
+}
+
+.button-swhite:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 128, 0.04), rgba(0, 0, 128, 0.04)), #FFFFFF;
+    color: #000080;
+}
+
+.button-swhite:disabled{
+    background: #E1E1E1;
+    border-radius: 4px;
+    color: #00003D;
+    opacity: 0.32;
+}
+
+.button-swhite:focus{
+    background: linear-gradient(0deg, rgba(0, 0, 61, 0.12), rgba(0, 0, 61, 0.12)), #FFFFFF;
+    border: 1px solid #000080;
+    color: #000080;
+}
+
+.button-swhite:active{
+    background: linear-gradient(0deg, rgba(0, 0, 128, 0.04), rgba(0, 0, 128, 0.04)), #FFFFFF;
+    color: #000080;
+}
+
