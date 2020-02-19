@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Button = props => {
   let className = 'button';
-  if (props.enrollButton) className += ' button-enroll';
+  if (props.type) className += ' button-' + props.type;
+  // if (props.enrollButton) className += ' button-enroll';
+  // if (props.primaryButton) className += ' button-primary';
+  // if (props.secondaryButton) className += ' button-secondary';
+  // if (props.ghostButton) className += ' button-ghost';
+  // if (props.smallWhiteButton) className += ' button-swhite';
 
   const goToDiv = url => {
     if (!url.includes('#')) window.location.href = url;
@@ -14,11 +19,10 @@ const Button = props => {
   }
 
   const getUrl = url => {
-    if(url[0] === 'h') {
-      return '/'
-    }
-
-    return url;
+      return '/';
+    
+    console.log(url[0] === '#' ? '/' : url);
+    return url[0] === '#' ? '/' : url;
   }
   
   return (
