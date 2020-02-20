@@ -38,7 +38,7 @@ const InteractionDesignSection = () => {
           </Col>
           <Col xs={12} md={4} align="center">
             <H3>22</H3>
-            <div className='ixd-description-small'>Projects await your intrest.</div>
+            <div className='ixd-description-small'>Projects await your interest.</div>
           </Col>
         </Row>
 
