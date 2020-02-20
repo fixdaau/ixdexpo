@@ -14,7 +14,6 @@ const Student = (props) => {
     return (
         <>
             <Header />
-            <Container>
                 <StudentSplashSection />
                 {/* <Divider marginOnTop={true} marginOnBottom={true} />
                 <CompanyLogosSection /> */}
@@ -26,7 +25,6 @@ const Student = (props) => {
                 <WeGotYourBackSection />
                 <Divider marginOnTop={true} marginOnBottom={true} />
                 <StudentSignup changeStudentModalVisibility={props.changeStudentModalVisibility} />
-            </Container>
             <Footer />
         </>
     );

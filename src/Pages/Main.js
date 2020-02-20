@@ -15,7 +15,6 @@ class Main extends Component {
         return (
             <>
                 <Header />
-                <Container>
                     <SplashSection />
                     {/* <Divider marginOnTop={true} marginOnBottom={true} />
                     <CompanyLogosSection /> */}
@@ -27,7 +26,6 @@ class Main extends Component {
                     <ProjectsSection />
                     {/* <Divider marginOnTop={true} marginOnBottom={true} /> */}
                     {/* <InterestedCompanySection />                     */}
-                </Container>
                 <Footer />
             </>
         );
