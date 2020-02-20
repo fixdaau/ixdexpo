@@ -1,22 +1,48 @@
+.student-splash-bg {
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(
+      270deg,
+      #00003d 0%,
+      rgba(0, 0, 61, 0) 3.92%,
+      rgba(0, 0, 61, 0) 95.92%,
+      #00003d 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 61, 0.85), rgba(0, 0, 61, 0.85)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../../Images/StudentSplashImage.jpeg);
+  background-blend-mode: normal, multiply, color, normal;
+  background-size: cover;
+  min-height: 100vh;
+}
 .paragraph {
-    font-size: 24px;
-    font-family: "Regular";
-    color: #56597a;
+  font-family: DIN Next LT Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
 }
 
-.information {
+.splash-button-container {
+  margin-top: 6em;
+  margin-bottom: 2em;
+}
+
+/*
+  .information {
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
     cursor: default;
-}
-
-.information div {
+  }
+  
+  .information div {
     display: flex;
     align-items: center;
-}
-
-div p {
+  }
+  
+  div p {
     display: inline;
     font-size: 18px;
     font-family: "Regular";
@@ -24,40 +50,43 @@ div p {
 }
 
 div .icon {
+    color: #7c7ca5;
+  }
+  
+  div .icon {
     padding-bottom: 4px;
     margin-right: 5px;
-}
-
-#splashImg {
-    width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-    .splash {
-        height: auto;
-        margin-bottom: 80px;
-    }
-   
-    #splashImg {
-        display:none;
-    }
-    
-    .information{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        // margin: 0;
-    }
-
-    .information div {
-        display: flex;
-        justify-content: left;
-        // padding-left: 30px;
-    }
-
-    .sign-up-stand{
-        display: flex;
-        justify-content: center;
-    }
-}
+  }
   
+  #splashImg {
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .splash {
+      height: auto;
+      margin-bottom: 80px;
+    }
+  
+    #splashImg {
+      display: none;
+    }
+  
+    .information {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      // margin: 0;
+    }
+  
+    .information div {
+      display: flex;
+      justify-content: left;
+      // padding-left: 30px;
+    }
+  
+    .Button {
+      display: flex;
+      justify-content: center;
+    }
+  }*/

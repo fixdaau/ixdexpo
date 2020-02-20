@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Bold;
+    font-family: DIN Next LT Pro Bold;
     src: url(./Fonts/DINNextLTPro-Bold.otf);
 }
 
@@ -19,8 +19,13 @@
 }
 
 @font-face {
-    font-family: Regular;
+    font-family: DIN Next LT Pro;
     src: url(./Fonts/DINNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: Joschmi;
+    src: url(./Fonts/Joschmi.otf);
 }
 
 body {
