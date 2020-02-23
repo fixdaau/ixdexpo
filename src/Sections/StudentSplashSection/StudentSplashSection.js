@@ -8,9 +8,10 @@ import Header from '../../Components/Header/Header';
 const StudentSplashSection = () => {
   return (
     <div className='modal-container student-splash-bg'>
+      <img className='dot-bg' src='./assets/Images/Dots.svg' />
       <Header />
-      <Container>
-        <Row className='splash'>
+      <Container className='splash'>
+        <Row>
           <Col sm={10} md={10}>
             <H1>Showcase your projects to industry leaders</H1>
             <p className='paragraph'>

@@ -14,7 +14,15 @@
   background-blend-mode: normal, multiply, color, normal;
   background-size: cover;
   min-height: 100vh;
+  position: relative;
 }
+
+.dot-bg {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
 .paragraph {
   font-family: DIN Next LT Pro;
   font-style: normal;
