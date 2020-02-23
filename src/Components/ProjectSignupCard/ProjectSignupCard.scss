@@ -9,20 +9,25 @@
 }
 
 .project-card-title {
-    font-size: 24px;
-    line-height: 0.94;
-    color: #22224b;
-    font-family: "Bold";
-    margin-bottom: 16px;
+    font-family: Joschmi;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'pnum' on, 'lnum' on, 'ss02' on, 'liga' off;
+    color: #00003D;
+    padding-bottom: 4px;
 }
 
 .project-student {
-    font-size: 8px;
-    color: #7c7ca5;
-    font-family: "Regular";
+    padding-left: 10px;
+    font-family: Share Tech Mono;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 61, 0.56);
 }
 
 .project-student-icon {
-    margin-bottom: -1px;
-    margin-right: 4px;
+    margin-top: 3px;
 }

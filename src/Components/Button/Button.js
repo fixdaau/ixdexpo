@@ -28,6 +28,7 @@ const Button = props => {
           goToDiv(props.url);
         }}
         className={className}
+        disabled={props.disabled}
       >
         {props.children}
       </button>
@@ -39,6 +40,7 @@ const Button = props => {
         props.onClick();
       }}
       className={className}
+      disabled={props.disabled}
     >
       {props.children}
     </button>

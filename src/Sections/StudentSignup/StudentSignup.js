@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { firebase } from '../../Utils/Firebase';
-import { Row, Col, Container } from 'react-grid-system';
+import { Row, Col, Container, Hidden } from 'react-grid-system';
 import Select from 'react-select';
 import H1 from '../../Components/H1/H1';
-import H2 from '../../Components/H2/H2';
 import Button from '../../Components/Button/Button';
-import './StudentSignup.scss';
 import ProjectSignupCard from '../../Components/ProjectSignupCard/ProjectSignupCard';
+import './StudentSignup.scss';
 
 class StudentSignup extends Component {
   state = {
@@ -158,7 +157,7 @@ class StudentSignup extends Component {
 
     const selectSemesterInput = (
       <>
-        {signupProjectView ? <p>YEAR OF SEMESTER</p> : null}
+        {signupProjectView ? <p className="input-label">YEAR OF SEMESTER</p> : null}
         <Select
           className="select-input"
           value={selectedSemester}
@@ -178,7 +177,7 @@ class StudentSignup extends Component {
 
     const projectTitleInput = (
       <>
-        {signupProjectView ? <p>PROJECT TITLE</p> : null}
+        {signupProjectView ? <p className="input-label">PROJECT TITLE</p> : null}
         <input
           defaultValue={filterValue}
           className={'input' + this.getValidationClass(isValidated.filterValue) + ' project-signup-input'}
@@ -194,7 +193,7 @@ class StudentSignup extends Component {
     const projectSemesterInput = (
       <>
         {signupProjectView && <div style={{ marginTop: '16px' }} />}
-        <p>PROJECT SEMESTER</p>
+        <p className="input-label">PROJECT SEMESTER</p>
         <Select
           className="select-input"
           placeholder="Project Semester"
@@ -211,7 +210,7 @@ class StudentSignup extends Component {
     const nameInput = (
       <>
         {signupProjectView && <div style={{ marginTop: '16px' }} />}
-        <p>YOUR NAME</p>
+        <p className="input-label">YOUR NAME</p>
         <input
           className={'input' + this.getValidationClass(isValidated.name)}
           placeholder="Name"
@@ -226,7 +225,7 @@ class StudentSignup extends Component {
     const mailInput = (
       <>
         {signupProjectView && <div style={{ marginTop: '16px' }} />}
-        <p>YOUR STUDENT EMAIL</p>
+        <p className="input-label">YOUR STUDENT EMAIL</p>
         <input
           className={'input' + this.getValidationClass(isValidated.email)}
           placeholder="Email"
@@ -244,11 +243,15 @@ class StudentSignup extends Component {
           <Container>
             <Row justify="center" align="center" id="student-signup-section">
               <Col md={12} lg={6}>
-                <H1>Are you in?</H1>
-                <p>
-                  Filter through all projects to find yours. If it has not yet been registered, you can sign it up right
-                  away.
-                </p>
+                <div className="signup-header">
+                  <H1 className="signup-title">Are you in?</H1>
+                  <Hidden xs={true} sm={true} md={true}>
+                    <p>
+                      Filter through all projects to find yours. If it has not yet been registered, you can sign it up
+                      right away.
+                    </p>
+                  </Hidden>
+                </div>
               </Col>
               <Col md={12} lg={6}>
                 <Row>
@@ -276,7 +279,7 @@ class StudentSignup extends Component {
                                   />
                                 ))}
                                 <div style={{ textAlign: 'center' }}>
-                                  <Button onClick={() => this.setState({ signupProjectView: true })}>
+                                  <Button onClick={() => this.setState({ signupProjectView: true })} type="primary">
                                     Sign up your project!
                                   </Button>
                                 </div>
@@ -284,8 +287,7 @@ class StudentSignup extends Component {
                             ) : (
                               <div style={{ textAlign: 'center', marginTop: '24px' }}>
                                 <p>Whoops... your project is not signed up yet.</p>
-                                <div style={{ marginBottom: '32px' }} />
-                                <Button onClick={() => this.setState({ signupProjectView: true })}>
+                                <Button onClick={() => this.setState({ signupProjectView: true })} type="primary">
                                   Sign up your project!
                                 </Button>
                               </div>
@@ -304,15 +306,15 @@ class StudentSignup extends Component {
                         <Col xs={12} lg={12}>
                           {mailInput}
                         </Col>
-                        <Col xs={12} sm={12} lg={4}>
-                          <div style={{ textAlign: 'center' }}>
-                            <button
-                              className="submit-button"
+                        <Col xs={12} sm={12} lg={6}>
+                          <div className="submit-project-button">
+                            <Button
                               disabled={!Object.keys(isValidated).every(k => isValidated[k] === 'valid')}
                               onClick={e => {
                                 e.preventDefault();
                                 this.addProject();
                               }}
+                              type="primary"
                             >
                               {isLoading ? (
                                 <img
@@ -323,7 +325,7 @@ class StudentSignup extends Component {
                               ) : (
                                 'Finish signup'
                               )}
-                            </button>
+                            </Button>
                           </div>
                         </Col>
                       </>
