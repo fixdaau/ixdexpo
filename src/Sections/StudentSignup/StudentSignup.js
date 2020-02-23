@@ -244,7 +244,7 @@ class StudentSignup extends Component {
             <Row justify="center" align="center" id="student-signup-section">
               <Col md={12} lg={6}>
                 <div className="signup-header">
-                  <H1 className="signup-title">Are you in?</H1>
+                  <H1>Are you in?</H1>
                   <Hidden xs={true} sm={true} md={true}>
                     <p>
                       Filter through all projects to find yours. If it has not yet been registered, you can sign it up
@@ -286,7 +286,7 @@ class StudentSignup extends Component {
                               </div>
                             ) : (
                               <div style={{ textAlign: 'center', marginTop: '24px' }}>
-                                <p>Whoops... your project is not signed up yet.</p>
+                                <p className="signup-label">Whoops... your project is not signed up yet.</p>
                                 <Button onClick={() => this.setState({ signupProjectView: true })} type="primary">
                                   Sign up your project!
                                 </Button>
