@@ -1,18 +1,88 @@
-.select-input {
-    font-size: 20px;
-    font-family: "Regular";
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.css-1hwfws3 {
-    padding: 9px 0px 8px 15px !important;
+.signup-bg {
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(
+      270deg,
+      #00003d 0%,
+      rgba(0, 0, 61, 0) 3.92%,
+      rgba(0, 0, 61, 0) 95.92%,
+      #00003d 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 61, 0.85), rgba(0, 0, 61, 0.85)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../../Images/SignupSection.jpg);
+  background-blend-mode: normal, multiply, color, normal;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.signup-header {
+  h1 {
+    margin-block-end: 0.35em !important;
+  }
+
+  p {
+    font-family: DIN Next LT Pro;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+}
+
+.input-label {
+  font-family: Share Tech Mono;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.signup-label {
+  font-family: DIN Next LT Pro;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.select-input {
+  font-size: 16px;
+  font-family: DIN Next LT Pro;
+}
+  
+.css-1492t68 {
+  color: rgba(0, 0, 61, 0.56) !important;
+}
+
+.css-vj8t7z {
+  height: 48px !important;
+}
+
+.css-2o5izw {
+  height: 48px !important;
+}
+
+.remove-padding {
+  margin-top: 30px !important;
+  padding: 0 !important;
+}
+
+.remove-padding-right {
+  padding-right: 0 !important;
+}
+
+.submit-project-button {
+  padding-top: 48px;
 }
 
 .project-list-wrapper {
     max-height: 336px;
     min-height: 320px;
     padding-top: 24px;
-    padding-right: 20px;
-    padding-left: 24px;
     overflow: scroll;
     overflow-x: hidden;
     margin-top: 8px;
@@ -30,15 +100,21 @@
  
 /* Handle */
 .project-list-wrapper::-webkit-scrollbar-thumb {
-    opacity:0.1;
+    opacity: 0.1;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(0,0,0,0.2); 
+    padding-left: 5px;
+    background: #fff; 
     // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .project-signup-input {
         margin-top: 16px;
+    }
+
+    .signup-header {
+      display: flex;
+      justify-content: center;
     }
 }
