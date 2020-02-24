@@ -59,7 +59,7 @@ class StudentSignup extends Component {
       submitTime: parseInt((new Date().getTime() / 1000).toFixed(0))
     };
 
-    // firebase.registerStudentProject(payload);
+    firebase.registerStudentProject(payload);
 
     setTimeout(() => {
       this.myFormRef.reset();
@@ -180,7 +180,7 @@ class StudentSignup extends Component {
         {signupProjectView ? <p className="input-label">PROJECT TITLE</p> : null}
         <input
           defaultValue={filterValue}
-          className={'input' + this.getValidationClass(isValidated.filterValue) + ' project-signup-input'}
+          className={'input' + this.getValidationClass(isValidated.filterValue) + ' project-signup-input signup-input'}
           placeholder="Project title"
           onInput={e => {
             this.setState({ filterValue: e.target.value });
@@ -311,6 +311,7 @@ class StudentSignup extends Component {
                             <Button
                               disabled={!Object.keys(isValidated).every(k => isValidated[k] === 'valid')}
                               onClick={e => {
+                                console.log(e)
                                 e.preventDefault();
                                 this.addProject();
                               }}

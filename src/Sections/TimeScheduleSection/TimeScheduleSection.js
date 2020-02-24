@@ -10,8 +10,8 @@ class TimeScheduleSection extends Component {
     return (
       <Container className='time-schedule-container' id='event-schedule'>
         {getTimeScheduleData().map((tsd, i) => (
-          <>
-            <Hidden key={i} lg={true} xl={true}>
+          <Fragment key={i + 4321}>
+            <Hidden key={i + 1234} lg={true} xl={true}>
               <SinglePointMobile
                 timeSpan={tsd.timeSpan}
                 title={tsd.title}
@@ -28,7 +28,7 @@ class TimeScheduleSection extends Component {
                 imgSrc={tsd.imgSrc}
               />
             </Hidden>
-          </>
+          </Fragment>
         ))}
       </Container>
     );

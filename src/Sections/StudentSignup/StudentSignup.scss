@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 480px;
 }
 
 .signup-bg {
@@ -19,7 +20,8 @@
     url(../../Images/SignupSection.jpg);
   background-blend-mode: normal, multiply, color, normal;
   background-size: cover;
-  min-height: 100vh;
+  padding-top: 112px;
+  padding-bottom: 112px;
 }
 
 .signup-header {
@@ -40,6 +42,10 @@
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
+}
+
+.signup-input {
+  font-family: DIN Next LT Pro;
 }
 
 .signup-label {
@@ -80,8 +86,7 @@
 }
 
 .project-list-wrapper {
-    max-height: 336px;
-    min-height: 320px;
+    height: 480px;
     padding-top: 24px;
     overflow: scroll;
     overflow-x: hidden;

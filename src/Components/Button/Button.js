@@ -23,8 +23,8 @@ const Button = props => {
   return props.url && props.url.length ? (
     <Link to={getUrl(props.url)}>
       <button
-        onClick={() => {
-          props.onClick();
+        onClick={(e) => {
+          props.onClick(e);
           goToDiv(props.url);
         }}
         className={className}
@@ -37,7 +37,7 @@ const Button = props => {
     <button
       onClick={e => {
         e.preventDefault();
-        props.onClick();
+        props.onClick(e);
       }}
       className={className}
       disabled={props.disabled}

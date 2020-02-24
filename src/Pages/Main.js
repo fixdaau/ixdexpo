@@ -14,8 +14,8 @@ const Main = props => {
       {/* <Divider marginOnTop={true} marginOnBottom={true} />
                 <CompanyLogosSection /> */}
       <InteractionDesignSection />
+      <ProjectsSection teaser='A little Sneak Peak of what’s to come' />
       <TimeScheduleSection />
-      <ProjectsSection />
       {/* <Divider marginOnTop={true} marginOnBottom={true} /> */}
       {/* <InterestedCompanySection />                     */}
     </>
