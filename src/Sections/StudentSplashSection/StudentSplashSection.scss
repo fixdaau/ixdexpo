@@ -1,11 +1,10 @@
 .student-splash-bg {
   left: 0px;
   top: 0px;
-  background:
-    linear-gradient(0deg, rgba(0, 0, 61, 0.85), rgba(0, 0, 61, 0.85)),
+  background: linear-gradient(0deg, rgba(0, 0, 61, 0.85), rgba(0, 0, 61, 0.85)),
     linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
     url(../../Images/StudentSplashImage.jpeg);
-  background-blend-mode: normal, multiply, color, normal;
+  background-blend-mode: multiply, color, normal;
   background-size: cover;
   position: relative;
 }
