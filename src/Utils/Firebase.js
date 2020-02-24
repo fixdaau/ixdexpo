@@ -15,7 +15,7 @@ class Firebase {
 
   getInterestedCompanies = () => this.db.collection('interestedCompanies').get();
 
-  getRegisteredStudentProjects = () => this.db.collection('studentProjects20').get();
+  getRegisteredStudentProjects = () => this.db.collection('studentProjects').get();
 
 
   // ADD-methods
