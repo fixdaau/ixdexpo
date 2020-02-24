@@ -1,49 +1,96 @@
 .modal-wrapper {
-    position: fixed;
-    top: 200px;
-    left: 0px;
-    width: 100%;
+  position: fixed;
+  top: 200px;
+  left: 0px;
+  width: 100%;
 }
 
 .modal {
-    width: 100%;
-    padding: 40px;
-    position: relative;
-    border-radius: 4px;
-    box-shadow: 0 10px 44px 0 rgba(0, 0, 0, 0.1); // height: 400px;
-    background: white;
-    margin-left: 0px !important;
+  width: 100%;
+  padding: 40px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 10px 44px 0 rgba(0, 0, 0, 0.1); // height: 400px;
+  background: white;
+  margin-left: 0px !important;
 }
 
 .sub-text {
-    font-size: 24px;
-    color: black;
-    font-family: "Regular";
+  font-size: 24px;
+  color: black;
+  font-family: DIN Next LT Pro;
+}
+
+.project-enrollment-information {
+  font-family: DIN Next LT Pro;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 16px;
 }
 
 .bullet-text {
-    font-family: "Light";
-    font-size: 18px;
-    line-height: 1.41;
-    padding-left: 16px;
+  font-family: DIN Next LT Pro;
+  font-size: 18px;
+  line-height: 1.41;
+  padding-left: 16px;
 }
 
 .redirect-button {
-    float: right;
-    margin-top: 24px;
+  float: right;
+  margin-top: 24px;
 }
 
 @media screen and (max-width: 768px) {
-    .modal-wrapper {
-        width: 80%;
-        position: absolute;
-        top: 16px;
-    }
+  .modal-wrapper {
+    width: 80%;
+    position: absolute;
+    top: 16px;
+  }
 
-    .redirect-button {
-        float: initial;
-        padding-top: 24px;
-        text-align: center;
-    }
+  .redirect-button {
+    float: initial;
+    padding-top: 24px;
+    text-align: center;
+  }
 }
 
+.submit-button-student {
+    margin-top: 12px;
+  padding: 12px 20px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: DIN Next LT Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  align-items: center;
+  text-align: center;
+  background-color: #000080;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+.submit-button-student:disabled {
+  background: #000080;;
+  border: 1px solid#000080;;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #e1e1e1;
+  opacity: 0.24 !important;
+}
+
+.submit-button-student:focus {
+  background: rgba(255, 255, 255, 0.24);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.submit-button-student:active {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ffffff;
+  color: #000080;
+}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Container, Row, Col, Hidden } from 'react-grid-system';
 import H2 from '../../Components/H2/H2';
 import './TimeScheduleSection.scss';

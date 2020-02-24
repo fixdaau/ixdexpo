@@ -29,7 +29,7 @@ const StudentSplashSection = () => {
               <Col sm={6} md={3} className='splash-buttons'>
                 <Button
                   type={'primary'}
-                  url='https://www.brainsbusiness.dk/dk/arrangementer/brainsbusiness-arrangementer/moed-fremtidens-interaktionsdesignere-paa-ixd-expo---aalborg.htm'
+                  url='/student#student-signup-section'
                   onClick={() => {}}
                 >
                   Sign up for a stand

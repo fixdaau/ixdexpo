@@ -1,19 +1,12 @@
 .student-splash-bg {
   left: 0px;
   top: 0px;
-  background: linear-gradient(
-      270deg,
-      #00003d 0%,
-      rgba(0, 0, 61, 0) 3.92%,
-      rgba(0, 0, 61, 0) 95.92%,
-      #00003d 100%
-    ),
+  background:
     linear-gradient(0deg, rgba(0, 0, 61, 0.85), rgba(0, 0, 61, 0.85)),
     linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
     url(../../Images/StudentSplashImage.jpeg);
   background-blend-mode: normal, multiply, color, normal;
   background-size: cover;
-  min-height: 100vh;
   position: relative;
 }
 
@@ -23,18 +16,8 @@
   right: 0px;
 }
 
-.paragraph {
-  font-family: DIN Next LT Pro;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
-  color: #ffffff;
-}
-
 .splash-button-container {
-  margin-top: 6em;
-  margin-bottom: 2em;
+  margin-top: 48px;
 }
 
 /*

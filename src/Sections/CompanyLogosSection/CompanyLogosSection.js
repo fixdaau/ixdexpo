@@ -17,7 +17,7 @@ const CompanyLogosSection = () => {
       companyPossibilites.push(i);
     }
     companyPossibilites = shuffleArray(companyPossibilites);
-    for (let i = 0; i < 4; ++i) {
+    for (let i = 0; i < 5; ++i) {
       let index = Math.floor(Math.random() * companyPossibilites.length);
       companyIndexArray.push(companyPossibilites[index]);
       companyPossibilites.splice(index, 1);
@@ -56,7 +56,7 @@ const CompanyLogosSection = () => {
           />
         ))}
         <div>
-          <p className='splash-company-paragraph'>And {extraCompanies} more!</p>
+          <p className='splash-company-paragraph'>And 11 more!</p>
         </div>
       </div>
     </Col>

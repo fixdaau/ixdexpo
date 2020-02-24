@@ -7,7 +7,7 @@ import React from "react";
 
 const WhatYouNeedSection = () => {
   return (
-    <div className="ixdbg">
+    <div className="ixdbg" id='whatyouneedsection'>
       <Container>
         <Row>
           <Col xs={12} align="center">
@@ -25,7 +25,7 @@ const WhatYouNeedSection = () => {
 
         <Row style={{ marginTop: "64px", marginBottom: "48px" }}>
           <Col xs={12} align="center">
-            <H3>We’ve got you back</H3>
+            <H3>We’ve got your back</H3>
           </Col>
         </Row>
 

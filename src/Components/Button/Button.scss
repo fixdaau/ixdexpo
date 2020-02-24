@@ -1,10 +1,15 @@
+.button {
+  cursor: pointer;
+  outline: none;
+}
+
 .button-primary {
   padding: 12px 20px;
   position: relative;
   background: #ffffff;
   border: 0px;
   border-radius: 4px;
-  font-family: DIN Next LT Pro;
+  font-family: DIN Next LT Pro; 
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
