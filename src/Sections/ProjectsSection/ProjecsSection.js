@@ -65,12 +65,12 @@ export default class ProjecsSection extends Component {
 
     if (currentSlide === 0) {
       leftArrowClass += " arrow-btn--disabled";
-      leftArrowPath = "./assets/images/arrow-disabled.svg";
+      leftArrowPath = "/assets/images/arrow-disabled.svg";
     }
 
     if (currentSlide + 3 === this.projectData.length) {
       rightArrowClass += " arrow-btn--disabled--right";
-      rightArrowPath = "./assets/images/arrow-disabled.svg";
+      rightArrowPath = "/assets/images/arrow-disabled.svg";
     }
 
     return (
@@ -78,9 +78,7 @@ export default class ProjecsSection extends Component {
         <Container>
           <Row>
             <Col xs={12} className="header-wrapper">
-              <div className="teasing-panel">
-                {this.props.teaser}
-              </div>
+              <div className="teasing-panel">{this.props.teaser}</div>
               <div className="project-section-heading">
                 Interaction design projects
                 <Hidden xs={true} md={true}>

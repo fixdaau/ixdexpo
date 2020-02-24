@@ -335,6 +335,14 @@ class StudentSignup extends Component {
                 </Row>
               </Col>
             </Row>
+            <Row
+              className="splash-company-container"
+              style={{ marginTop: "200px", marginBottom: "80px" }}
+            >
+              <Col xs={12} md={12}>
+                <p className="splash-company-paragraph">FixD © 2020</p>
+              </Col>
+            </Row>
           </Container>
         </div>
       </form>
