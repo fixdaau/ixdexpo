@@ -1,3 +1,10 @@
 .header-wrapper {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
+}
+
+.logo-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between baseline;
 }

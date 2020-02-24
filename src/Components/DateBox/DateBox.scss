@@ -1,0 +1,52 @@
+.date-box {
+  width: 100%;
+  height: 75%;
+  border: solid white 1px;
+  display: flex;
+  flex-direction: column;
+  margin: 48.24px 0px;
+}
+.date-box > div {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.date-box .date-box-top {
+  border-bottom: solid white 1px;
+}
+
+.date-day {
+  font-family: DIN Next LT Pro Bold;
+  font-size: 48px;
+  margin: 20px 20px 0px 20px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.date-month-year {
+  font-family: Share Tech Mono;
+  font-size: 18px;
+  margin: 0px 20px 20px 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.date-building {
+  font-family: DIN Next LT Pro Bold;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0px 0px 0px 0px;
+}
+
+.date-city {
+  font-family: Share Tech Mono;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0px 0px 0px 0px;
+}
