@@ -1,17 +1,35 @@
+.project-section-container {
+  background: linear-gradient(0deg, rgba(0, 0, 61, 0.08), rgba(0, 0, 61, 0.08)),
+    #ffffff;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
 .header-wrapper {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
-
-.slick-arrow:before{
-    display: flex;
-    justify-content: center;
-    color: rgba(0,0,255,0.8);
-    font-size: 30px;
+.teasing-panel {
+  font-family: Share Tech Mono;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00003d;
+  margin-bottom: 16px;
 }
 
-@media only screen and (max-width: 700px) {
-    .slick-arrow{
-        display: none !important;
-    }
-  }
+.slick-arrow:before {
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 255, 0.8);
+  font-size: 30px;
+}
+
+.project-section-heading {
+  font-family: DIN Next LT Pro Bold;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  color: #00003d;
+}

@@ -19,10 +19,10 @@ const SplashSection = () => {
             <Row className='splash'>
               <Col xs={12} sm={12} md={9}>
                 <H1>Meet the designers of tomorrow</H1>
-                <p className='paragraph'>
+                <div className='paragraph'>
                   Join us, and discover what interaction designers can do for
                   your company
-                </p>
+                </div>
               </Col>
             </Row>
 
@@ -35,7 +35,6 @@ const SplashSection = () => {
                 >
                   Sign up for free
                 </Button>
-
                 <Button type='secondary' onClick={() => {}} url={'/student'}>
                   I'm a student
                 </Button>

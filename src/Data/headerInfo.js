@@ -1,7 +1,7 @@
 export const studentLinks = () => [
   {
     text: "Your Stand",
-    id: "#your-stand"
+    id: "#whatyouneedsection"
   },
   {
     text: "Event Schedule",
@@ -9,7 +9,7 @@ export const studentLinks = () => [
   },
   {
     text: "Find Your Project",
-    id: "#find-project"
+    id: "#student-signup-section"
   }
 ];
 
@@ -24,6 +24,6 @@ export const companyLinks = () => [
   },
   {
     text: "Sign Up",
-    id: "#sign-up"
+    id: "https://www.brainsbusiness.dk/dk/arrangementer/brainsbusiness-arrangementer/moed-fremtidens-interaktionsdesignere-paa-ixd-expo---aalborg.htm"
   }
 ];

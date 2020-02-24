@@ -4,9 +4,12 @@ import "./Header.scss";
 const HeaderLink = props => {
   const goToDiv = url => {
     if (url) {
-      if (!url.includes("#")) window.location.href = url;
-      const elmnt = document.getElementById(url.split("#")[1]);
-      elmnt.scrollIntoView({ behavior: "smooth" });
+      if (!url.includes("#")) {
+        window.location.href = url;
+      } else {
+        const elmnt = document.getElementById(url.split("#")[1]);
+        elmnt.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 

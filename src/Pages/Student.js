@@ -4,25 +4,22 @@ import { Container } from 'react-grid-system';
 import Footer from '../Sections/Footer/Footer';
 import StudentSignup from '../Sections/StudentSignup/StudentSignup';
 import StudentSplashSection from '../Sections/StudentSplashSection/StudentSplashSection';
-import Divider from '../Components/Divider/Divider';
 import WhatYouNeedSection from '../Sections/WhatYouNeedSection/WhatYouNeedSection';
 import WeGotYourBackSection from '../Sections/WeGotYourBackSection/WeGotYourBackSection';
 import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
-import CompanyLogosSection from '../Sections/CompanyLogosSection/CompanyLogosSection';
+import ProjectSection from '../Sections/ProjectsSection/ProjecsSection';
+
 
 const Student = props => {
   return (
     <>
       <StudentSplashSection />
-      {/* <Divider marginOnTop={true} marginOnBottom={true} />
-                <CompanyLogosSection /> */}
-      <TimeScheduleSection />
       <WhatYouNeedSection />
-      <WeGotYourBackSection />
+      <ProjectSection teaser='Your project could be featured here too' />
+      <TimeScheduleSection />
       <StudentSignup
         changeStudentModalVisibility={props.changeStudentModalVisibility}
       />
-      <Footer />
     </>
   );
 };

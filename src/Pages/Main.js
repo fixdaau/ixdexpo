@@ -6,6 +6,7 @@ import Divider from '../Components/Divider/Divider';
 import ProjectsSection from '../Sections/ProjectsSection/ProjecsSection';
 import TimeScheduleSection from '../Sections/TimeScheduleSection/TimeScheduleSection';
 import InteractionDesignSection from '../Sections/InteractionDesignSection/InteractionDesignSection';
+import CompanyFooterSection from '../Sections/CompanyFooterSection/CompanyFooterSection';
 
 const Main = props => {
   return (
@@ -14,8 +15,9 @@ const Main = props => {
       {/* <Divider marginOnTop={true} marginOnBottom={true} />
                 <CompanyLogosSection /> */}
       <InteractionDesignSection />
+      <ProjectsSection teaser='A little Sneak Peak of what’s to come' />
       <TimeScheduleSection />
-      <ProjectsSection />
+      <CompanyFooterSection />
       {/* <Divider marginOnTop={true} marginOnBottom={true} /> */}
       {/* <InterestedCompanySection />                     */}
     </>

@@ -4,17 +4,23 @@ import "./StudentProject.scss";
 
 const StudentProject = ({ title, description, imgSrc }) => {
   return (
-    <div className="prj-card">
+    <div
+      className="prj-card"
+      style={{
+        background: `linear-gradient(
+      180deg,
+      rgba(0, 0, 61, 0) 0%,
+      rgba(0, 0, 61, 0.74) 100%
+    ), url(./assets/Images/${imgSrc})`,
+        backgroundPosition: "center center",
+        backgroundSize: "cover"
+      }}
+    >
       <div className="prj-card-wrapper">
-        <div className="image-sizer">
-          <img
-            className="prj-img"
-            src={require(`../../Images/${imgSrc}`)}
-            alt={title}
-          />
+        <div className='header-description-wrapper'>
+          <H3>{title}</H3>
+          <div className='description'>{description}</div>
         </div>
-        <H3>{title}</H3>
-        <p>{description}</p>
       </div>
     </div>
   );
