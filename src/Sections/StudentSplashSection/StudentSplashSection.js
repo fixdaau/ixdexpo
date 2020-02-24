@@ -8,10 +8,11 @@ import DateBox from "../../Components/DateBox/DateBox";
 import CompanyLogosSection from "../CompanyLogosSection/CompanyLogosSection";
 
 const StudentSplashSection = () => {
+  const dots = require('../../Images/Dots.svg')
+
   return (
-    <div className="modal-container student-splash-bg">
-      <img className="dot-bg" src="assets/images/Dots.svg" />
-      <div className="dot-bg" />
+    <div className='modal-container student-splash-bg'>
+      <img className='dot-bg' src={dots} />
       <Header />
       <Container>
         <Row>
