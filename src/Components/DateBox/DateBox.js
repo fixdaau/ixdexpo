@@ -9,8 +9,10 @@ const DateBox = () => {
         <p className='date-month-year'>MARCH, 2020</p>
       </div>
       <div className='date-box-bottom'>
-        <p className='date-building'>Cassiopeia</p>
-        <p className='date-city'>AALBORG</p>
+        <div>
+          <p className='date-building'>Cassiopeia</p>
+          <p className='date-city'>AALBORG</p>
+        </div>
       </div>
     </div>
   );

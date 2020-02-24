@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Container } from 'react-grid-system';
+import { Col, Row, Container, Visible, Hidden } from 'react-grid-system';
 import Button from '../../Components/Button/Button';
 import H1 from '../../Components/H1/H1';
 import './SplashSection.scss';
@@ -15,9 +15,9 @@ const SplashSection = () => {
       <Header />
       <Container>
         <Row>
-          <Col sm={12} md={9.5}>
+          <Col xs={12} sm={12} md={9}>
             <Row className='splash'>
-              <Col sm={10} md={9}>
+              <Col xs={12} sm={12} md={9}>
                 <H1>Meet the designers of tomorrow</H1>
                 <p className='paragraph'>
                   Join us, and discover what interaction designers can do for
@@ -27,7 +27,7 @@ const SplashSection = () => {
             </Row>
 
             <Row className='splash splash-button-container'>
-              <Col sm={6} md={3} className='splash-buttons'>
+              <Col sm={12} md={5} className='splash-buttons'>
                 <Button
                   type={'primary'}
                   url='https://www.brainsbusiness.dk/dk/arrangementer/brainsbusiness-arrangementer/moed-fremtidens-interaktionsdesignere-paa-ixd-expo---aalborg.htm'
@@ -35,16 +35,17 @@ const SplashSection = () => {
                 >
                   Sign up for free
                 </Button>
-              </Col>
-              <Col sm={6} md={3} className='splash-buttons'>
+
                 <Button type='secondary' onClick={() => {}} url={'/student'}>
                   I'm a student
                 </Button>
               </Col>
             </Row>
           </Col>
-          <Col sm={0} md={2.5}>
-            <DateBox />
+          <Col sm={0} md={3}>
+            <Visible md lg xl>
+              <DateBox />
+            </Visible>
           </Col>
         </Row>
 
@@ -55,16 +56,8 @@ const SplashSection = () => {
             </p>
           </Col>
           <CompanyLogosSection />
-
-          {/* <Col xs={12} md={12}>
-            <p className="splash-company-paragraph">
-              You will be in good company
-            </p>
-          </Col>
-          <Col xs={12} md={12}></Col> */}
         </Row>
       </Container>
-      {/* </div> */}
     </div>
   );
 };

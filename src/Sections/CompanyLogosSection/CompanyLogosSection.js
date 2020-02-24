@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import './CompanyLogosSection.scss';
 import { Col, Row } from 'react-grid-system';
 import CompanyLogos from '../../Components/CompanyLogosComponent/companyLogosComponent';
 import { getCompanyLogos2020 } from '../../Data/companyLogosData';
+import { firebase } from '../../Utils/Firebase';
 
 const CompanyLogosSection = () => {
-  const companyLogos = getCompanyLogos2020();
+  //const companyLogos = getCompanyLogos2020();
   let companyIndexArray = [];
+  const [companyLogos, setCompanies] = useState(getCompanyLogos2020());
+  const [extraCompanies, setExtraCompanies] = useState('');
 
   const whichCompanies = () => {
     let companyPossibilites = [];
@@ -31,8 +34,17 @@ const CompanyLogosSection = () => {
     return array;
   };
 
-  whichCompanies();
+  useEffect(() => {
+    firebase.getInterestedCompanies().then(docs => {
+      let extra = 0;
+      docs.forEach(doc => {
+        extra++;
+      });
+      setExtraCompanies(extra);
+    });
+  }, []);
 
+  whichCompanies();
   return (
     <Col xs={12} md={12} style={{}}>
       <div className='logo-row'>
@@ -44,7 +56,7 @@ const CompanyLogosSection = () => {
           />
         ))}
         <div>
-          <p className='splash-company-paragraph'>And {16} more!</p>
+          <p className='splash-company-paragraph'>And {extraCompanies} more!</p>
         </div>
       </div>
     </Col>

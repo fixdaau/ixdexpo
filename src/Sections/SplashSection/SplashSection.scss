@@ -17,8 +17,6 @@
 }
 .paragraph {
   font-family: DIN Next LT Pro;
-  font-style: normal;
-  font-weight: normal;
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
@@ -27,6 +25,10 @@
 .splash-button-container {
   margin-top: 6em;
   margin-bottom: 2em;
+}
+.splash-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .splash-company-paragraph {
@@ -39,61 +41,3 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-
-/*
-.information {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-  cursor: default;
-}
-
-.information div {
-  display: flex;
-  align-items: center;
-}
-
-div p {
-  display: inline;
-  font-size: 18px;
-  font-family: "Regular";
-  color: #7c7ca5;
-}
-
-div .icon {
-  padding-bottom: 4px;
-  margin-right: 5px;
-}
-
-#splashImg {
-  width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .splash {
-    height: auto;
-    margin-bottom: 80px;
-  }
-
-  #splashImg {
-    display: none;
-  }
-
-  .information {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    // margin: 0;
-  }
-
-  .information div {
-    display: flex;
-    justify-content: left;
-    // padding-left: 30px;
-  }
-
-  .Button {
-    display: flex;
-    justify-content: center;
-  }
-}*/
