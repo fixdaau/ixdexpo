@@ -9,9 +9,11 @@ import CompanyLogosSection from '../CompanyLogosSection/CompanyLogosSection';
 import DateBox from '../../Components/DateBox/DateBox';
 
 const SplashSection = () => {
+  const dots = require('../../Images/Dots.svg')
+
   return (
     <div className='splash-bg'>
-      <img className='dot-bg' src='./assets/Images/Dots.svg' />
+      <img className='dot-bg' src={dots} />
       <Header />
       <Container>
         <Row>
