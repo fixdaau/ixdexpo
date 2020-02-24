@@ -4,15 +4,29 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
   flex: none;
   order: 0;
   align-self: center;
 
   &:hover {
     cursor: pointer;
-    opacity: 0.75;
+    color: #ffffff;
   }
+}
+
+.header-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s;
+}
+
+.header-link:hover::after {
+  width: 100%;
+  //transition: width .3s;
 }
 
 .header-link-col {
