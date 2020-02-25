@@ -15,7 +15,7 @@ class Firebase {
 
   getInterestedCompanies = () => this.db.collection('interestedCompanies').get();
 
-  getRegisteredStudentProjects = () => this.db.collection('studentProjects').get();
+  getRegisteredStudentProjects = () => this.db.collection('studentProjects20').get();
 
 
   // ADD-methods
@@ -23,10 +23,10 @@ class Firebase {
 
   addInterestedCompany = payload => this.db.collection('interestedCompanies').add(payload);
 
-  registerStudentProject = payload => this.db.collection('studentProjects').add(payload);
+  registerStudentProject = payload => this.db.collection('studentProjects20').add(payload);
 
   // Needs test for updates -> better method maybe
-  addStudentToProject = (payload, projectId) => this.db.collection('studentProjects').doc(projectId).update(
+  addStudentToProject = (payload, projectId) => this.db.collection('studentProjects20').doc(projectId).update(
     {
       students: app.firestore.FieldValue.arrayUnion(payload)
     }
