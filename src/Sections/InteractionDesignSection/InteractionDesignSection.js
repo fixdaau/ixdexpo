@@ -73,7 +73,7 @@ const InteractionDesignSection = () => {
             <div className="ixd-description-small">
               Selma Lagerløfs Vej 300,
               <br />
-              9000 Aalborg
+              9220 Aalborg Ø
             </div>
           </Col>
         </Row>

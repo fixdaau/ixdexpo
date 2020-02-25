@@ -86,12 +86,16 @@ class StudentPopupModal extends Component {
             </div>
 
             <Col xs={12} sm={12} md={8}>
-              <H1 alignment="left">We’re glad you want to participate</H1>
+              <div className="project-section-heading">
+                We’re glad you want to participate
+              </div>
               <div className="sub-text">
                 Thanks for enrolling. We just need a little information about
                 you to keep track of all the projects.
               </div>
-              <div className='project-enrollment-information'>Enroll on project: {projectTitle}</div>
+              <div className="project-enrollment-information">
+                Enroll on project: {projectTitle}
+              </div>
               <Row style={{ marginTop: "40px" }}>
                 <Col>
                   <Col xs={12}>
