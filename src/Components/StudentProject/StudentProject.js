@@ -17,7 +17,7 @@ const StudentProject = ({ title, description, imgSrc }) => {
       }} */
     >
       <div className="prj-card-wrapper">
-        <img className="prj-image-bg" src={`./assets/Images/${imgSrc}`} />
+        <img className="prj-image-bg" src={`./assets/images/${imgSrc}`} />
         <div className='prj-image-bg-overlay' />
         <div className="header-description-wrapper">
           <H3>{title}</H3>
