@@ -9,7 +9,7 @@
     "feather-icons-react": "^0.4.1",
     "firebase": "^5.8.3",
     "mapbox-gl": "^0.53.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.8.2",
     "react-alice-carousel": "^1.13.1",
     "react-card-flip": "^0.4.0",
